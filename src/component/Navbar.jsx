@@ -119,22 +119,54 @@ const Navbar = () => {
       {/* Level 2: Sub-dropdown for MBBS Abroad - opens to right */}
       <div className="absolute left-full top-0 ml-1 bg-white rounded-md shadow-xl py-1 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 z-50 border border-gray-200 w-64 max-h-96 overflow-y-auto">
         <a href="/mbbs-abroad/russia" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          Russia (Top choice - Kazan Federal, etc.)
+          RUSSIA
         </a>
-        <a href="/mbbs-abroad/kyrgyzstan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          Kyrgyzstan (Osh State University, etc.)
+        <a href="/mbbs-abroad/bangladesh" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          BANGLADESH
         </a>
-        <a href="/mbbs-abroad/kazakhstan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          Kazakhstan (Kazakh National Medical University)
+        <a href="/mbbs-abroad/bangladesh" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+         NEPAL
         </a>
         <a href="/mbbs-abroad/georgia" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          Georgia (Tbilisi State Medical University)
+         KYRGYZSTAN
         </a>
         <a href="/mbbs-abroad/philippines" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          Philippines (University of Perpetual Help, etc.)
+         KAZAKHSTAN
         </a>
         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          Uzbekistan (Bukhara State Medical University)
+          UZBEKISTAN
+        </a>
+
+         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          TAJIKISATN
+        </a>
+
+         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          IRAN
+        </a>
+
+          <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          EGYPT
+        </a>
+
+
+         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          BELARUS
+        </a>
+
+         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          GEORGIA
+        </a>
+
+         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+CHINA        </a>
+
+ <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          VINTNAM
+        </a>
+
+         <a href="/mbbs-abroad/uzbekistan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
+          ARMERNIA
         </a>
         <a href="/mbbs-abroad/all" className="block px-4 py-2 text-sm text-[#F48C06] font-medium hover:bg-orange-100 border-t mt-1">
           View All MBBS Abroad Countries →
