@@ -1,3 +1,7 @@
+
+
+
+
 import { useState, useEffect } from "react";
 
 // Icons (two different icons repeated — that's how it was in original)
@@ -5,6 +9,7 @@ import icon1 from "../Images/icons/ux-design_2998253.svg";
 import icon2 from "../Images/icons/selling_12091247.svg";
 import icon3 from "../Images/icons/ux-design_2998253.svg";
 import icon4 from "../Images/icons/selling_12091247.svg";
+import { X } from 'lucide-react';
 
 // University / ranking images
 import univercity from "../Images/university-image/singapore.jpg";
@@ -92,8 +97,7 @@ const mbbsOptions = [
     fees: "24 Lakhs to 41 Lakhs",
     link: "https://eduhawk.in/study-mbbs-in-bangladesh.html",
   },
-
-    {
+  {
     country: "Russia",
     fees: "24 Lakhs to 41 Lakhs",
     link: "https://eduhawk.in/study-mbbs-in-bangladesh.html",
@@ -108,14 +112,11 @@ const mbbsOptions = [
     fees: "14 Lakhs to 21 Lakhs",
     link: "https://eduhawk.in/study-mbbs-in-kyrgyzstan.html",
   },
-
-
   {
     country: "Egypt",
     fees: "31 Lakhs to 36 Lakhs",
     link: "https://eduhawk.in/study-mbbs-in-egypt.html",
   },
-
   {
     country: "Kazakhstan",
     fees: "16 Lakhs to 23 Lakhs",
@@ -136,7 +137,6 @@ const mbbsOptions = [
     fees: "18 Lakhs to 28 Lakhs",
     link: "https://eduhawk.in/study-mbbs-in-georgia.html",
   },
-
   {
     country: "Vietnam",
     fees: "21 Lakhs to 30 Lakhs",
@@ -149,6 +149,7 @@ export default function HeroSection() {
   const [activeNav, setActiveNav] = useState("Home");
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -156,6 +157,8 @@ export default function HeroSection() {
     country: "",
     message: "",
   });
+
+  const [isOpen, setIsOpen] = useState(true);
 
   // Hero carousel auto-slide
   useEffect(() => {
@@ -181,6 +184,186 @@ export default function HeroSection() {
 
   return (
     <div className="min-h-screen bg-white font-sans">
+{isOpen && (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/65 p-4 sm:p-6 scroll-smooth">
+    {/* Main modal container */}
+    <div className="relative w-full max-w-4xl max-h-[90vh] sm:max-h-[88vh] rounded-2xl bg-white shadow-2xl overflow-hidden flex flex-col">
+
+      {/* Elegant close button */}
+      <button
+        onClick={() => setIsOpen(false)}
+        className="absolute top-4 right-4 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 shadow-md hover:bg-gray-100 text-gray-700 hover:text-gray-900 transition-all duration-200"
+        aria-label="Close"
+      >
+        <X size={22} strokeWidth={2.5} />
+      </button>
+
+      {/* Horizontal layout wrapper */}
+      <div className="flex flex-col lg:flex-row h-full overflow-hidden">
+
+        {/* LEFT COLUMN: Benefits / Trust (fixed, no scroll) */}
+        <div className="lg:w-5/12 bg-gradient-to-br from-[#0a2342] via-[#1a4a7a] to-[#0d3460] text-white p-8 sm:p-10 flex flex-col justify-between hidden lg:flex">
+          <div>
+            <div className="text-4xl mb-6">🌍</div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 leading-tight">
+              Your MBBS Abroad Journey Starts Here
+            </h2>
+            <p className="text-teal-100 text-base mb-8">
+              Trusted by 2,000+ Indian students • Transparent process • NMC-approved universities only
+            </p>
+
+            <ul className="space-y-5 text-base">
+              <li className="flex items-start gap-3">
+                <span className="text-2xl">🎯</span>
+                <span>Free expert 1-on-1 counselling</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-2xl">🔍</span>
+                <span>Best university match as per your NEET & budget</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-2xl">🛡️</span>
+                <span>End-to-end support: visa, travel, FMGE guidance</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-2xl">💰</span>
+                <span>No hidden charges – 100% transparent</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-1 text-sm text-teal-200">
+            <p className="font-medium">Popular Destinations</p>
+            <div className="flex flex-wrap gap-1">
+              <span className="bg-white/20 px-3 py-1 rounded-full text-xs">Russia</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full text-xs">Georgia</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full text-xs">Kazakhstan</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full text-xs">Kyrgyzstan</span>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT COLUMN: Form + Header (scrollable on small height) */}
+        <div className="flex-1 overflow-y-auto px-6 py-8 sm:px-10 sm:py-10 scrollbar-thin scrollbar-thumb-teal-400 scrollbar-track-transparent">
+
+          {/* Mobile-only header (benefits summary) */}
+          <div className="lg:hidden text-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              MBBS Abroad Counselling
+            </h2>
+            <p className="text-gray-600 text-sm">
+              Free • Expert • Trusted by 2000+ students
+            </p>
+          </div>
+
+          {/* Form */}
+          <form className="space-y-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter your full name"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none transition bg-gray-50"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="your.email@gmail.com"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none transition bg-gray-50"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Phone Number (+91) *
+              </label>
+              <input
+                type="tel"
+                required
+                placeholder="+91 98765 43210"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none transition bg-gray-50"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Current City *
+              </label>
+              <select
+                required
+                defaultValue=""
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none bg-gray-50"
+              >
+                <option value="" disabled>Select city</option>
+                <option>Indore</option>
+                <option>Bhopal</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Pune</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Interested Countries (can select multiple)
+              </label>
+            
+
+
+               <select
+                required
+                defaultValue=""
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none bg-gray-50"
+              >
+               <option>Russia</option>
+                <option>Georgia</option>
+                <option>Kazakhstan</option>
+                <option>Kyrgyzstan</option>
+                <option>Uzbekistan</option>
+                <option>Philippines</option>
+                <option>Nepal</option>
+                <option>Bangladesh</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-4 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 mt-2"
+            >
+              Get Free Counselling Now →
+            </button>
+
+            <p className="text-center text-sm text-teal-700 font-medium mt-3">
+              Worth ₹4,999 – 100% Free Today!
+            </p>
+
+            <p className="text-center text-xs text-gray-500 mt-5">
+              By submitting, you agree to our Terms & Privacy Policy
+            </p>
+          </form>
+
+          {/* Small trust badge at bottom */}
+          <div className="mt-8 text-center text-xs text-gray-500">
+            <p>Secure & Confidential • We never spam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
       <section className="relative">
         {/* Full-screen width carousel */}
         <div className="relative w-full h-[70vh] min-h-[520px] overflow-hidden">
@@ -254,6 +437,10 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
+
+      {/* ──────────────────────────────────────────────── */}
+      {/* The rest of your sections remain unchanged */}
+      {/* ──────────────────────────────────────────────── */}
 
       <section className="bg-gradient-to-br from-[#0a2342] via-[#1a4a7a] to-[#0d3460] py-20 md:py-28 px-5 sm:px-8 lg:px-12 text-center relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#d4a853]/10 pointer-events-none" />

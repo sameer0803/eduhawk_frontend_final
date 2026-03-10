@@ -26,6 +26,18 @@ import Russian from "./pages/Country/Russian.jsx"
 import Bangladesh from './pages/Country/Bangladesh.jsx';
 import Services from './pages/Component/Services.jsx';
 import Contact from './pages/Component/Contact.jsx';
+import Kazakhstan from './pages/Country/Kazakhstan.jsx';
+import Kyrgyzstan from './pages/Country/Kyrgyzstan.jsx';
+import Armernia from './pages/Country/Armernia.jsx';
+import Belarus from './pages/Country/Belarus.jsx';
+import China from './pages/Country/China.jsx';
+import Egypt from './pages/Country/Egypt.jsx';
+import Georgia from './pages/Country/Georgia.jsx';
+import Iran from './pages/Country/Iran.jsx';
+import Nepal from './pages/Country/Nepal.jsx';
+import Tejikistan from './pages/Country/Tejikistan.jsx';
+import Uzbekistan from './pages/Country/Uzbekistan.jsx';
+import Vietnam from './pages/Country/Vietnam.jsx';
 
 // import Contact from './pages/Contact';
 
@@ -50,8 +62,79 @@ const router = createBrowserRouter([
         path: 'mbbs-abroad/bangladesh',
         element: <Bangladesh />,
       },
+
+       {
+        path: 'mbbs-abroad/kazakhstan',
+        element: <Kazakhstan />,
+      },
+
+       {
+        path: 'mbbs-abroad/armernia',
+        element: <Armernia />,
+      },
       
 
+
+        {
+        path: 'mbbs-abroad/belarus',
+        element: <Belarus />,
+      },
+      
+
+      
+
+        {
+        path: 'mbbs-abroad/china',
+        element: <China />,
+      },
+      
+
+
+
+        {
+        path: 'mbbs-abroad/egypt',
+        element: <Egypt />,
+      },
+      
+
+         {
+        path: 'mbbs-abroad/georgia',
+        element: <Georgia />,
+      },
+      
+
+         {
+        path: 'mbbs-abroad/iran',
+        element: <Iran />,
+      },
+
+        {
+        path: 'mbbs-abroad/nepal',
+        element: <Nepal />,
+      },
+      
+
+
+      
+        {
+        path: 'mbbs-abroad/tejikistan',
+        element: <Tejikistan />,
+      },
+
+      
+        {
+        path: 'mbbs-abroad/uzbekistan',
+        element: <Uzbekistan />,
+      },
+
+      
+        {
+        path: 'mbbs-abroad/vietnam',
+        element: <Vietnam />,
+      },
+      
+      
+      
          {
         path: 'services',
         element: <Services />,
