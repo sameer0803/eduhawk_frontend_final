@@ -1355,7 +1355,7 @@ const Contact = () => {
                 <motion.div variants={itemVariants} className="flex justify-center md:justify-start pt-2">
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey='6Ld7i4UsAAAAAN8tOsoFs-yyJwbCxzUANMmE1mFD'
+                    sitekey='6Lc-3YYsAAAAAOIsxrtV3Jd_hl5Np4hD8sXSxgc_'
                     theme="light"
                   />
                 </motion.div>

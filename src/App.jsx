@@ -25,7 +25,7 @@ import Russian from "./pages/Country/Russian.jsx";
 import Bangladesh from "./pages/Country/Bangladesh.jsx";
 import Services from "./pages/Component/Services.jsx";
 import Contact from "./pages/Component/Contact.jsx";
-import Kazakhstan from "./pages/Country/Kazakhstan.jsx";
+import Kazakhstan from "./pages/Country/kazakhstan.jsx";
 import Kyrgyzstan from "./pages/Country/Kyrgyzstan.jsx";
 import Armernia from "./pages/Country/Armernia.jsx";
 import Belarus from "./pages/Country/Belarus.jsx";
@@ -86,6 +86,12 @@ const router = createBrowserRouter([
       },
 
       {
+        path: "mbbs-abroad/kyrgyzstan",
+        element: <Kyrgyzstan />,
+      },
+
+
+        {
         path: "mbbs-abroad/egypt",
         element: <Egypt />,
       },

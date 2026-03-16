@@ -128,7 +128,7 @@ const Navbar = () => {
          NEPAL
         </a>
         <a href="/mbbs-abroad/kazakhstan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-         KYRGYZSTAN
+         Kazakhstan
         </a>
 
          <a href="/mbbs-abroad/kyrgyzstan" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
@@ -143,36 +143,26 @@ const Navbar = () => {
           TAJIKISATN
         </a>
 
-         <a href="/mbbs-abroad/iran" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          IRAN
-        </a>
+    
 
           <a href="/mbbs-abroad/egypt" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
           EGYPT
         </a>
 
 
-         <a href="/mbbs-abroad/belarus" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          BELARUS
-        </a>
+       
 
          <a href="/mbbs-abroad/georgia" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
           GEORGIA
         </a>
 
-         <a href="/mbbs-abroad/china" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-CHINA        </a>
-
+        
  <a href="/mbbs-abroad/vintnam" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
           VINTNAM
         </a>
 
-         <a href="/mbbs-abroad/armernia" className="block px-4 py-2 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors">
-          ARMERNIA
-        </a>
-        <a href="/mbbs-abroad/all" className="block px-4 py-2 text-sm text-[#F48C06] font-medium hover:bg-orange-100 border-t mt-1">
-          View All MBBS Abroad Countries →
-        </a>
+       
+     
       </div>
     </div>
   </div>

@@ -7,10 +7,61 @@ import ORELSTATEUNIVERSITY from "../../Images/Russia/OREL STATE UNIVERSITY.jpg";
 import ORENBURGSTATEUNIVERSITY from "../../Images/Russia/ORENBURG STATE UNIVERSITY.jpg";
 import TVERSTATEMEDICALUNIVERSITY from "../../Images/Russia/TVER STATE MEDICAL UNIVERSITY.jpeg";
 import AltaiStateMedicalUniversity from "../../Images/Russia/Altai State Medical University.jpg";
+
+import { FiPlus, FiMinus } from 'react-icons/fi';
+const faqData = [
+  {
+    question: "Is MBBS in Bangladesh safe for Indian students?",
+    answer:
+      "Yes, Bangladesh is generally considered safe for Indian students. Most medical colleges offer secure, gated hostels with 24/7 security, CCTV, wardens, and dedicated support for international students. Cultural & food similarities (many hostels serve Indian meals) make it feel comfortable and home-like.",
+  },
+  {
+    question: "Is MBBS in Bangladesh recognized in India?",
+    answer:
+      "Yes — degrees from BMDC (Bangladesh Medical & Dental Council) recognized colleges are valid in India as per NMC guidelines. Indian students must qualify the NEXT exam (or FMGE during transition phase) to get provisional/permanent registration and practice in India.",
+  },
+  {
+    question: "Is NEET required for MBBS admission in Bangladesh?",
+    answer:
+      "Yes, qualifying NEET is mandatory for all Indian students pursuing MBBS abroad (as per current NMC regulations). It is also required later to appear for NEXT/FMGE and practice in India.",
+  },
+  {
+    question: "What is the total cost of MBBS in Bangladesh?",
+    answer:
+      "The complete package (tuition + hostel + food + misc.) usually ranges from ₹25 lakh to ₹45 lakh for the entire 6-year course, depending on the college (government quota seats are cheaper, private ones higher). No donation/capitation fee is required.",
+  },
+  {
+    question: "What is the duration of MBBS in Bangladesh?",
+    answer:
+      "The MBBS program is 6 years total — 5 years of academic study + 1 year of compulsory rotating internship (usually done in the affiliated teaching hospital).",
+  },
+  {
+    question: "Is the MBBS course in Bangladesh taught in English?",
+    answer:
+      "Yes, almost all medical colleges approved for international students (especially Indians) teach entirely in English medium, following a curriculum very similar to India's.",
+  },
+  {
+    question: "Are hostel and food facilities available for Indian students?",
+    answer:
+      "Yes — nearly every college provides separate, well-maintained hostels for boys and girls. Many offer Indian vegetarian/non-veg mess/food options, laundry, Wi-Fi, gym, and common rooms at affordable monthly charges (usually included or ₹5,000–10,000/month).",
+  },
+  {
+    question: "Do Bangladeshi medical colleges follow the Indian syllabus?",
+    answer:
+      "Yes — the curriculum, textbooks, teaching pattern, and subjects are very similar to Indian MBBS (based on BMDC guidelines aligned with international standards). This makes it easier for students to prepare for NEXT/FMGE and adapt quickly.",
+  },
+];
+
 const Bangladesh = () => {
   const [showMoreAbout, setShowMoreAbout] = useState(false);
   const [showMoreClimate, setShowMoreClimate] = useState(false);
 
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* ==================== HEADER CAROUSEL ==================== */}
@@ -23,7 +74,7 @@ const Bangladesh = () => {
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-2xl">
-              STUDY MBBS IN  Bangladesh
+              STUDY MBBS IN Bangladesh
             </h1>
           </div>
         </div>
@@ -39,7 +90,7 @@ const Bangladesh = () => {
             <img
               src={Russianflag2}
               alt="Russia flag"
-              className="w-32 md:w-40 border-4 border-gray-800 rounded shadow-lg"
+              className="w-32 md:w-40  rounded shadow-lg"
             />
           </div>
           <div>
@@ -53,17 +104,9 @@ const Bangladesh = () => {
         <div className="grid md:grid-cols-2 gap-12 mb-20">
           <div>
             <h2 className="text-3xl font-bold text-center md:text-left text-blue-900 mb-6">
-              About Russia
+              About Bangladesh
             </h2>
             <p className="text-lg leading-relaxed text-gray-700">
-              Russia has become popular among medical students, who are looking
-              for a safe option internationally, as it has a strong academic
-              environment for MBBS abroad. With a duration of approximately{" "}
-              <strong>6 years</strong>, Russia has a well-balanced combination
-              of quality education and practical clinical exposure.
-            </p>
-
-            <p className="mt-4 text-lg leading-relaxed text-gray-700">
               Bangladesh is a great choice for prospective medical students; it
               offers a safe environment, quality of life, and a supportive
               atmosphere for international students. With a course duration of
@@ -72,6 +115,9 @@ const Bangladesh = () => {
               students. Students from around the world choose Bangladesh for
               their medical studies, and graduates from Bangladeshi universities
               are highly respected in clinical settings around the globe.
+            </p>
+
+            <p className="mt-4 text-lg leading-relaxed text-gray-700">
               Bangladesh offers a wide range of services and training that are
               essential to the professional development of students, assuring a
               successful and powerful professional journey. While Bangladesh
@@ -81,11 +127,11 @@ const Bangladesh = () => {
 
             {showMoreAbout ? (
               <p className="mt-4 text-lg leading-relaxed text-gray-700">
-                While Russia remains a popular destination, other countries like
-                China, Nepal, Germany, Philippines, Ukraine, Bangladesh, and
-                Kyrgyzstan also offer affordable medical education.
-                International students are often exempted from the one-year
-                preparatory course.
+                Studying MBBS in Bangladesh, in general, students are not
+                required to take a separate entrance exam for admission. The
+                government of Bangladesh has introduced various initiatives and
+                provided various subsidies to ensure that the tuition fees for
+                both local and international students are affordable.
               </p>
             ) : null}
 
@@ -111,7 +157,7 @@ const Bangladesh = () => {
           {/* Left – Quick Info Table */}
           <div>
             <h3 className="text-2xl font-bold text-center text-blue-900 mb-6">
-              Quick Information – Study MBBS in Russia
+              Quick Information – Study MBBS in Bangladesh
             </h3>
 
             <div className="overflow-x-auto">
@@ -142,17 +188,12 @@ const Bangladesh = () => {
                     <td className="p-4">English</td>
                   </tr>
 
-                    <tr>
-                    <td className="p-4 font-semibold">Universities Recognition</td>
+                  <tr>
+                    <td className="p-4 font-semibold">
+                      Universities Recognition
+                    </td>
                     <td className="p-4">NMC & WHO-approved</td>
                   </tr>
-
-                 
-
-
-
-
-
                 </tbody>
               </table>
             </div>
@@ -161,17 +202,25 @@ const Bangladesh = () => {
           {/* Right – About MBBS */}
           <div>
             <h3 className="text-3xl font-bold text-blue-900 mb-6 text-center md:text-left">
-              About MBBS in Russia
+              About MBBS in Bangladesh
             </h3>
             <p className="text-lg leading-relaxed text-gray-700">
-              Studying MBBS in Russia is notably straightforward
+              Studying MBBS in Bangladesh, in general, students are not required
+              to take a separate entrance exam for admission. The government of
+              Bangladesh has introduced various initiatives and provided various
+              subsidies to ensure that the tuition fees for both local and
+              international students are affordable.
             </p>
 
             {showMoreClimate ? (
               <p className="mt-4 text-lg leading-relaxed text-gray-700">
-                — no entrance exam (apart from NEET for Indian students). The
-                Russian government subsidizes education, keeping fees relatively
-                low...
+                And additional student benefits, including medical insurance and
+                basic healthcare facilities, ensure a conducive learning
+                environment throughout the academic journey. In addition, the
+                main language used for instruction in most MBBS courses in
+                Bangladesh is English, ensuring greater ease of access for
+                international students. Finally, the climate in Bangladesh is
+                moderate compared to other places in the world.
               </p>
             ) : null}
 
@@ -249,8 +298,9 @@ const Bangladesh = () => {
                   1. High-Quality Education
                 </h5>
                 <p className="text-gray-700">
-                  Globally recognized universities with strong academic
-                  standards.
+                  Bangladeshi medical universities are offering high-quality
+                  education. Many universities are globally recognised and
+                  maintain high educational standards.
                 </p>
               </div>
               <div>
@@ -258,7 +308,9 @@ const Bangladesh = () => {
                   2. Affordable Tuition Fees
                 </h5>
                 <p className="text-gray-700">
-                  Significantly lower than many Western countries.
+                  It is more cost-effective for international students to pursue
+                  their MBBS in Bangladesh as the tuition fees are low compared
+                  to other countries.
                 </p>
               </div>
               <div>
@@ -266,7 +318,9 @@ const Bangladesh = () => {
                   3. No Additional Entrance Exams
                 </h5>
                 <p className="text-gray-700">
-                  (NEET required for Indian students only)
+                  Some medical universities in Bangladesh don’t conduct entrance
+                  tests for international students, making the admission process
+                  easier for them.
                 </p>
               </div>
               <div>
@@ -274,7 +328,9 @@ const Bangladesh = () => {
                   4. English-Medium Programs
                 </h5>
                 <p className="text-gray-700">
-                  No language barrier for most international students.
+                  Most of the universities in Bangladesh offer MBBS programs in
+                  the English medium, which helps eliminate the language barrier
+                  for the students.
                 </p>
               </div>
             </div>
@@ -282,20 +338,25 @@ const Bangladesh = () => {
 
           <div>
             <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
-              Cost of Study MBBS in Russia
+              Cost of Studying MBBS In Bangladesh
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The cost of the <strong> MBBS course in Russia</strong> is very
-              low for Indian students who want to pursue their{" "}
-              <strong>MBBS</strong> course in Russia. Russia is a very demanding
-              country for Indian students who want to pursue their MBBS course.
-              The government of Russia has funded the fee structure for the MBBS
-              course. Studying MBBS in Russia is an easy task for Indian
-              students compared to other countries. Studying MBBS in Russia is
-              very cheap. The universities in Russia provide a smooth platform
-              for <strong>international students</strong> so that they don't
-              need to pay the high tuition fees. Apart from this, there is no
-              need to pay any donations.
+              The low <strong> MBBS fees in Bangladesh </strong> make the
+              country attractive to Indian students, considering the low cost of
+              living. The country is also a preferred destination for{" "}
+              <strong>MBBS</strong> studies. The government reduces the fees,
+              making the course very cheap. The course is considered easy to
+              pursue in comparison to other countries. The overall cost of the
+              course is low in the country. The experience is smooth for
+              international students in the country’s universities, hence the
+              low tuition fees for the students. There is also the added
+              advantage of not having to pay any donations. The experience of
+              completing the six-year course is budget-friendly for the
+              students. The cost of the course, MBBS (Bachelor of Medicine and
+              Bachelor of Surgery), varies depending on the country and the
+              university. The overall cost of the course is low when compared to
+              other countries. The cost is also likely to vary; hence, the best
+              option is to check the latest updates from the university.
             </p>
           </div>
         </div>
@@ -303,19 +364,11 @@ const Bangladesh = () => {
         {/* You can continue adding more sections like Food & Accommodation, Admission Process, Documents, Eligibility, Comparison table, etc. in similar fashion */}
       </div>
 
-      {/* Floating Enroll Button */}
-      <button
-        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-5 rounded-full shadow-2xl hover:scale-105 transition transform animate-pulse"
-        onClick={() => alert("Open Admission Modal / Redirect to form")}
-      >
-        <span className="font-bold text-lg">ENROLL NOW!</span>
-      </button>
-
       {/* ==================== FOOD & ACCOMMODATION SECTION ==================== */}
       <div className="bg-gradient-to-b from-gray-50 to-white py-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-10">
-            Food and Accommodation Cost – MBBS in Russia
+            Food and Accommodation Cost –MBBS In Bangladesh
           </h2>
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
@@ -369,249 +422,301 @@ const Bangladesh = () => {
       </div>
 
       {/* ==================== ADMISSION PROCESS ==================== */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-10">
-            Admission Process for MBBS in Russia 2025–2026
-          </h2>
+    <div className="py-16 bg-white">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-10">
+      Admission Process For MBBS In Bangladesh 2026
+    </h2>
 
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              The admission process for{" "}
-              <strong> MBBS (Bachelor of Medicine, Bachelor of Surgery)</strong>{" "}
-              courses in Russia varies slightly among different universities,
-              but the general process is as follows:
-            </p>
+    <div className="max-w-4xl mx-auto">
+      <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        The admission process for{" "}
+        <strong>MBBS (Bachelor of Medicine, Bachelor of Surgery)</strong>{" "}
+        courses in Bangladesh may vary slightly among different universities, but the general process for Indian students is as follows:
+      </p>
 
-            <div className="space-y-10">
-              <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                <h4 className="text-xl font-bold text-blue-900 mb-4">
-                  1. Research and Select a University:
-                </h4>
-                <p className="text-gray-700">
-                  Research the <strong>Russian universities</strong> that offer
-                  MBBS courses. Some of the best universities for MBBS courses
-                  in Russia are
-                  <strong>
-                    {" "}
-                    Moscow State Medical University, Saint Petersburg State
-                    Medical University, Kazan Federal University, etc.
-                  </strong>
-                </p>
-                <p className="mt-2 text-gray-600">
-                  Check: NMC/WHO recognition, English medium availability,
-                  tuition fees, hostel quality.
-                </p>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                <h4 className="text-xl font-bold text-blue-900 mb-4">
-                  2. Check Eligibility
-                </h4>
-                <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                  <li>Completed 10+2 with Physics, Chemistry, Biology</li>
-                  <li>
-                    Minimum 50% aggregate in PCB (40% for reserved categories)
-                  </li>
-                  <li>NEET qualified (mandatory for Indian students)</li>
-                  <li>Age: 17 years completed by 31st Dec of admission year</li>
-                </ul>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                <h4 className="text-xl font-bold text-blue-900 mb-4">
-                  3. Apply Online
-                </h4>
-                <p className="text-gray-700">
-                  Fill university application form → Submit scanned documents →
-                  Receive admission/invitation letter (usually within 2–4
-                  weeks).
-                </p>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                <h4 className="text-xl font-bold text-blue-900 mb-4">
-                  4. Visa & Travel
-                </h4>
-                <p className="text-gray-700">
-                  Use invitation letter to apply for student visa at Russian
-                  Embassy/Consulate → Book tickets → Arrive in Russia → Complete
-                  university registration & medical check-up.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="space-y-10">
+        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+          <h4 className="text-xl font-bold text-blue-900 mb-4">
+            1. Research and Select a University
+          </h4>
+          <p className="text-gray-700">
+            Research NMC-approved medical universities/colleges in Bangladesh that offer MBBS in English medium.
+            <br />
+            <strong>Some well-known options include:</strong>
+          </p>
+          <ul className="mt-2 text-gray-600 list-disc pl-6">
+            <li>Dhaka Medical College</li>
+            <li>Chittagong Medical College</li>
+            <li>Bangabandhu Sheikh Mujib Medical University</li>
+            <li>Bangladesh Medical College (Private)</li>
+            <li>Dhaka National Medical College (Private)</li>
+            <li>International Medical College</li>
+          </ul>
+          <p className="mt-4 text-gray-700">
+            Check: NMC/WHO recognition, English medium, tuition fees (~₹25-45 lakhs total), hostel facilities, and FMGE pass rates.
+          </p>
         </div>
-      </div>
 
-      {/* ==================== DOCUMENTS + ELIGIBILITY + SCHOLARSHIPS ==================== */}
-      <div className="py-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left - Required Documents */}
-            <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center md:text-left">
-                Required Documents for MBBS in Russia 2025–2026
-              </h2>
-
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl shadow-sm border">
-                  <h5 className="text-lg font-semibold text-blue-800">
-                    Educational Documents
-                  </h5>
-                  <ul className="list-disc pl-5 mt-3 text-gray-700 space-y-1">
-                    <li>10th & 12th marksheets + certificates</li>
-                    <li>NEET scorecard & admit card</li>
-                    <li>Passport (valid for minimum 18–24 months)</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm border">
-                  <h5 className="text-lg font-semibold text-blue-800">
-                    Other Important Documents
-                  </h5>
-                  <ul className="list-disc pl-5 mt-3 text-gray-700 space-y-1">
-                    <li>Passport size photos (white background)</li>
-                    <li>HIV & medical fitness certificate</li>
-                    <li>
-                      Invitation letter from university (issued after admission)
-                    </li>
-                    <li>Visa application form & fee receipt</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Eligibility + Scholarships */}
-            <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
-                Eligibility Criteria & Scholarships
-              </h2>
-
-              <div className="bg-white p-6 rounded-xl shadow-sm border mb-8">
-                <h4 className="text-xl font-semibold text-blue-900 mb-4">
-                  Basic Eligibility
-                </h4>
-                <ul className="list-decimal pl-5 space-y-2 text-gray-700">
-                  <li>Age 17+ by 31st Dec of admission year</li>
-                  <li>50%+ in PCB in 12th (40% for SC/ST/OBC)</li>
-                  <li>NEET qualified (mandatory for Indians)</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-sm border">
-                <h4 className="text-xl font-semibold text-blue-900 mb-4">
-                  Popular Scholarships
-                </h4>
-                <ul className="space-y-4">
-                  <li>
-                    <strong>
-                      Russian Government Scholarship (Open Doors / Quota)
-                    </strong>
-                    <br />
-                    <span className="text-gray-600 text-sm">
-                      Covers tuition + sometimes hostel. Very competitive —
-                      apply via education-in-russia.com
-                    </span>
-                  </li>
-                  <li>
-                    <strong>University-specific Merit Scholarships</strong>
-                    <br />
-                    <span className="text-gray-600 text-sm">
-                      Offered by many universities for good NEET/academic scores
-                    </span>
-                  </li>
-                  <li>
-                    <strong>Other options</strong>
-                    <br />
-                    <span className="text-gray-600 text-sm">
-                      Education Future, Inlaks, etc. (limited for MBBS)
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+          <h4 className="text-xl font-bold text-blue-900 mb-4">
+            2. Check Eligibility
+          </h4>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Completed 10+2 with Physics, Chemistry, Biology (and English)</li>
+            <li>Minimum 60% aggregate in PCB (some require GPA 7.0/10 or equivalent; 40-50% for reserved categories in some cases)</li>
+            <li>NEET qualified (mandatory for Indian students as per NMC)</li>
+            <li>Age: 17 years completed by 31st Dec of admission year (no upper limit in most cases, but typically under 25)</li>
+            <li>No more than 1-2 year gap after 12th (varies by college)</li>
+          </ul>
         </div>
-      </div>
 
-      {/* ==================== COMPARISON TABLE ==================== */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
-            MBBS in Russia vs MBBS in India – Quick Comparison (2025–2026)
-          </h2>
+        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+          <h4 className="text-xl font-bold text-blue-900 mb-4">
+            3. Apply Online / Through Authorized Channels
+          </h4>
+          <p className="text-gray-700">
+            Fill the university/Bangladesh Medical University (BMU) application form online (often via DGHS or college portals) → Submit scanned documents → Pay application fee → Receive admission/invitation letter (usually within weeks; deadlines often extended to Feb/March for 2026 session).
+          </p>
+        </div>
 
-          <div className="overflow-x-auto">
-            <table className="min-w-full border-collapse border border-gray-300 text-left">
-              <thead>
-                <tr className="bg-blue-900 text-white">
-                  <th className="p-4 border border-gray-300 text-center font-semibold">
-                    Criteria
-                  </th>
-                  <th className="p-4 border border-gray-300 text-center font-semibold">
-                    MBBS in Russia
-                  </th>
-                  <th className="p-4 border border-gray-300 text-center font-semibold">
-                    MBBS in India
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700">
-                <tr className="bg-gray-50">
-                  <td className="p-4 border font-medium">
-                    Tuition Fees (per year)
-                  </td>
-                  <td className="p-4 border">₹2 – 5 Lakhs</td>
-                  <td className="p-4 border">
-                    Govt: ₹40k – ₹2 Lakhs
-                    <br />
-                    Private: ₹10 – 25+ Lakhs
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 border font-medium">
-                    Donation / Capitation
-                  </td>
-                  <td className="p-4 border text-green-700">No Donation</td>
-                  <td className="p-4 border text-red-700">
-                    Often ₹30–80 Lakhs in private colleges
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-4 border font-medium">Course Duration</td>
-                  <td className="p-4 border">6 years (including internship)</td>
-                  <td className="p-4 border">5.5 years + 1 year internship</td>
-                </tr>
-                <tr>
-                  <td className="p-4 border font-medium">Class Strength</td>
-                  <td className="p-4 border">20–40 students</td>
-                  <td className="p-4 border">
-                    100–150+ students (especially private)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-4 border font-medium">Global Recognition</td>
-                  <td className="p-4 border">
-                    NMC, WHO, WFME approved universities
-                  </td>
-                  <td className="p-4 border">
-                    NMC approved, but private colleges vary
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 border font-medium">
-                    Medium of Instruction
-                  </td>
-                  <td className="p-4 border">English</td>
-                  <td className="p-4 border">English</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+          <h4 className="text-xl font-bold text-blue-900 mb-4">
+            4. Visa & Travel
+          </h4>
+          <p className="text-gray-700">
+            Use invitation letter to apply for student visa at Bangladeshi High Commission/Embassy in India → Book tickets → Arrive in Bangladesh → Complete university registration & medical check-up.
+          </p>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+{/* ==================== DOCUMENTS + ELIGIBILITY + SCHOLARSHIPS ==================== */}
+<div className="py-16 bg-gradient-to-b from-white to-gray-50">
+  <div className="container mx-auto px-4 max-w-7xl">
+    <div className="grid md:grid-cols-2 gap-12">
+      {/* Left - Required Documents */}
+      <div>
+        <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center md:text-left">
+          Required Documents for MBBS in Bangladesh 2026
+        </h2>
+
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-xl shadow-sm border">
+            <h5 className="text-lg font-semibold text-blue-800">
+              Educational Documents
+            </h5>
+            <ul className="list-disc pl-5 mt-3 text-gray-700 space-y-1">
+              <li>10th & 12th marksheets + certificates</li>
+              <li>NEET scorecard & admit card</li>
+              <li>Passport (valid for the course duration)</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-sm border">
+            <h5 className="text-lg font-semibold text-blue-800">
+              Other Important Documents
+            </h5>
+            <ul className="list-disc pl-5 mt-3 text-gray-700 space-y-1">
+              <li>Passport size photos (white background)</li>
+              <li>Medical fitness certificate (including HIV test if required)</li>
+              <li>Invitation/admission letter from university</li>
+              <li>Visa application form & fee receipt</li>
+              <li>Police clearance/no criminal record (if asked)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Right - Eligibility + Scholarships */}
+      <div>
+        <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
+          Eligibility Criteria & Scholarships
+        </h2>
+
+        <div className="bg-white p-6 rounded-xl shadow-sm border mb-8">
+          <h4 className="text-xl font-semibold text-blue-900 mb-4">
+            Basic Eligibility
+          </h4>
+          <ul className="list-decimal pl-5 space-y-2 text-gray-700">
+            <li>Age 17+ by 31st Dec of admission year</li>
+            <li>60%+ in PCB in 12th (varies; some accept 50% for reserved)</li>
+            <li>NEET qualified (mandatory for Indians to practice in India later)</li>
+          </ul>
+        </div>
+
+        <div className="bg-white p-6 rounded-xl shadow-sm border">
+          <h4 className="text-xl font-semibold text-blue-900 mb-4">
+            Popular Scholarships / Financial Aid
+          </h4>
+          <ul className="space-y-4">
+            <li>
+              <strong>Bangladesh Government / SAARC Quota Scholarships</strong>
+              <br />
+              <span className="text-gray-600 text-sm">
+                Limited seats with subsidized fees for SAARC students (including Indians); very competitive.
+              </span>
+            </li>
+            <li>
+              <strong>University Merit Scholarships</strong>
+              <br />
+              <span className="text-gray-600 text-sm">
+                Some private colleges offer based on NEET/academic scores.
+              </span>
+            </li>
+            <li>
+              <strong>Other options</strong>
+              <br />
+              <span className="text-gray-600 text-sm">
+                Limited external scholarships (e.g., via Indian govt schemes or private trusts); mostly self-funded.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ==================== COMPARISON TABLE ==================== */}
+<div className="py-16 bg-white">
+  <div className="container mx-auto px-4 max-w-5xl">
+    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
+      MBBS in Bangladesh vs MBBS in India – Quick Comparison (2026)
+    </h2>
+
+    <div className="overflow-x-auto">
+      <table className="min-w-full border-collapse border border-gray-300 text-left">
+        <thead>
+          <tr className="bg-blue-900 text-white">
+            <th className="p-4 border border-gray-300 text-center font-semibold">
+              Criteria
+            </th>
+            <th className="p-4 border border-gray-300 text-center font-semibold">
+              MBBS in Bangladesh
+            </th>
+            <th className="p-4 border border-gray-300 text-center font-semibold">
+              MBBS in India
+            </th>
+          </tr>
+        </thead>
+        <tbody className="text-gray-700">
+          <tr className="bg-gray-50">
+            <td className="p-4 border font-medium">
+              Tuition Fees (Total Course)
+            </td>
+            <td className="p-4 border">₹25 – 45 Lakhs</td>
+            <td className="p-4 border">
+              Govt: ₹1-10 Lakhs (rare seats)<br />
+              Private: ₹50 Lakhs – 1.5 Cr+
+            </td>
+          </tr>
+          <tr>
+            <td className="p-4 border font-medium">
+              Donation / Capitation
+            </td>
+            <td className="p-4 border text-green-700">No Donation</td>
+            <td className="p-4 border text-red-700">
+              Often ₹30–80 Lakhs+ in private colleges
+            </td>
+          </tr>
+          <tr className="bg-gray-50">
+            <td className="p-4 border font-medium">Course Duration</td>
+            <td className="p-4 border">6 years (5 years study + 1 year internship)</td>
+            <td className="p-4 border">5.5 years + 1 year internship</td>
+          </tr>
+          <tr>
+            <td className="p-4 border font-medium">Class Strength</td>
+            <td className="p-4 border">25–50 students</td>
+            <td className="p-4 border">
+              100–150+ (especially private)
+            </td>
+          </tr>
+          <tr className="bg-gray-50">
+            <td className="p-4 border font-medium">Global Recognition</td>
+            <td className="p-4 border">
+              NMC, WHO, BMDC approved
+            </td>
+            <td className="p-4 border">
+              NMC approved (govt better recognized)
+            </td>
+          </tr>
+          <tr>
+            <td className="p-4 border font-medium">
+              Medium of Instruction
+            </td>
+            <td className="p-4 border">English</td>
+            <td className="p-4 border">English</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{/* ==================== FAQs ==================== */}
+<div className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
+          Frequently Asked Questions – MBBS in Bangladesh 2026
+        </h2>
+
+        <div className="space-y-5">
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              className={`bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md ${
+                openIndex === index ? 'shadow-lg border-blue-300' : ''
+              }`}
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none focus:ring-2 focus:ring-blue-200"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="text-2xl font-bold text-blue-700 min-w-[2.5rem]">
+                    {index + 1}.
+                  </span>
+                  <h4 className="text-xl md:text-2xl font-semibold text-blue-900 leading-tight">
+                    {item.question}
+                  </h4>
+                </div>
+
+                <span className="text-3xl text-blue-600 flex-shrink-0 transition-transform duration-300">
+                  {openIndex === index ? (
+                    <FiMinus className="transform rotate-0" />
+                  ) : (
+                    <FiPlus className="transform rotate-0" />
+                  )}
+                </span>
+              </button>
+
+              <div
+                className={`px-6 transition-all duration-500 ease-in-out ${
+                  openIndex === index
+                    ? 'max-h-[600px] pb-8 pt-2 opacity-100'
+                    : 'max-h-0 pb-0 opacity-0'
+                }`}
+                style={{ overflow: 'hidden' }}
+              >
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {item.answer}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-600 text-lg">
+            Have more questions? Feel free to contact our experts for free counseling!
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
   );
 };
 
