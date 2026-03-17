@@ -5862,6 +5862,7 @@ const stateInfo = [
     state: "Assam",
     text: "Assam has multiple Government Medical Colleges that include Assam Medical College, Dibrugarh and Gauhati Medical College, Guwahati and these were established from the year 1947 onwards. In Assam total approx 1,500 MBBS Seats available. In Assam there are Private Medical Colleges also available.",
   },
+  
   {
     state: "Bihar",
     text: "Bihar has multiple Government Medical Colleges that include Patna Medical College, Patna and Darbhanga Medical College and these were established from the year 1925 onwards. In Bihar total approx 1,500 MBBS Seats available. In Bihar there are Private Medical Colleges also available.",
