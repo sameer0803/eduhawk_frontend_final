@@ -40,6 +40,7 @@ import Vietnam from "./pages/Country/Vietnam.jsx";
 import BlogSection from "./pages/Blog/BlogSection.jsx";
 import Blog from "./pages/Component/Blog.jsx";
 import BlogDetail from "./pages/Component/BlogDetail.jsx";
+import AllIndia from "./pages/Country/India/AllIndia.jsx";
 
 // import Contact from './pages/Contact';
 
@@ -148,6 +149,15 @@ const router = createBrowserRouter([
         path: "/blog/:id",
         element: <BlogDetail />,
       },
+
+
+      {
+        path: "mbbs-india/northern/delhi/aiims-delhi",
+        element: <AllIndia />,
+      },
+
+
+      
       // aur jitne page chahiye add kar sakte ho
     ],
   },
