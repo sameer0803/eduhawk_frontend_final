@@ -40,10 +40,7 @@ const Navbar = () => {
             </a>
 
             <div className="relative group">
-              <a
-                href="/medical-colleges"
-                className="text-[#2F327D] hover:text-[#F48C06] transition-colors duration-200 relative whitespace-nowrap flex items-center gap-1"
-              >
+              <a className="text-[#2F327D] hover:text-[#F48C06] transition-colors duration-200 relative whitespace-nowrap flex items-center gap-1">
                 Medical Colleges
                 <svg
                   className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
@@ -68,28 +65,18 @@ const Navbar = () => {
                 <div className="relative group/sub">
                   <div className="px-4 py-2 text-[#F48C06] font-semibold text-base flex justify-between items-center hover:bg-orange-50 cursor-pointer">
                     <a
-                        href="/mbbs-india/northern/delhi/aiims-delhi"
-                        className="block px-2 py-1.5 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors"
-                      >
-
-                    MBBS India
-                      </a>
+                      href="/mbbs-india/northern/delhi/aiims-delhi"
+                      className="block px-2 py-1.5 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors"
+                    >
+                      MBBS India
+                    </a>
                     <svg
                       className="w-4 h-4 transition-transform group-hover/sub:rotate-180"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                    ></svg>
                   </div>
-
-                
                 </div>
 
                 {/* Divider */}

@@ -5863,6 +5863,8 @@ const stateInfo = [
     text: "Assam has multiple Government Medical Colleges that include Assam Medical College, Dibrugarh and Gauhati Medical College, Guwahati and these were established from the year 1947 onwards. In Assam total approx 1,500 MBBS Seats available. In Assam there are Private Medical Colleges also available.",
   },
   
+
+
   {
     state: "Bihar",
     text: "Bihar has multiple Government Medical Colleges that include Patna Medical College, Patna and Darbhanga Medical College and these were established from the year 1925 onwards. In Bihar total approx 1,500 MBBS Seats available. In Bihar there are Private Medical Colleges also available.",
@@ -6066,7 +6068,7 @@ const AllIndia = () => {
       <div className="bg-white shadow-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-[#2F327D]">
-            STATE WISE MBBS COLLEGES & SEATS (AY 2025-26)
+            STATE WISE MBBS COLLEGES & SEATS (AY 2026-27)
           </h1>
           <p className="mt-3 text-lg md:text-xl text-gray-700">
             Total Seats in India:{" "}
