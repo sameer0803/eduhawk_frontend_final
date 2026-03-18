@@ -65,7 +65,7 @@ const Navbar = () => {
                 <div className="relative group/sub">
                   <div className="px-4 py-2 text-[#F48C06] font-semibold text-base flex justify-between items-center hover:bg-orange-50 cursor-pointer">
                     <a
-                      href="/mbbs-india/northern/delhi/aiims-delhi"
+                      href="/allcollege"
                       className="block px-2 py-1.5 text-sm text-[#2F327D] hover:bg-orange-50 hover:text-[#F48C06] transition-colors"
                     >
                       MBBS India

@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Make sure to install & import react-router-dom
 import Eduhawk from "../assets/Eduhawk.png"; // Your logo path
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   const COUNTRIES = [
@@ -16,7 +16,7 @@ export default function Footer() {
     
     { name: "Bangladesh", flag: "🇧🇩", path: "/mbbs-abroad/bangladesh", seats: "200+", fee: "₹22-40L" },
     { name: "Vietnam", flag: "🇻🇳", path: "/mbbs-abroad/vietnam", seats: "100+", fee: "₹25-35L" },
-    // Add more if needed: Armenia, Belarus, China, Egypt, Iran, Tajikistan
+    
   ];
 
   return (
@@ -44,16 +44,16 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-4 text-xl">
-              <a href="#" className="hover:text-amber-400 transition-colors duration-200">
+              <a href="https://www.facebook.com/eduhawkglobal" className="hover:text-amber-400 transition-colors duration-200">
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:text-amber-400 transition-colors duration-200">
-                <FaTwitter />
+              <a href="https://www.youtube.com/@Eduhawkteam" className="hover:text-amber-400 transition-colors duration-200">
+                <FaYoutube />
               </a>
-              <a href="#" className="hover:text-amber-400 transition-colors duration-200">
+              <a href="https://www.instagram.com/eduhawk_global/" className="hover:text-amber-400 transition-colors duration-200">
                 <FaInstagram />
               </a>
-              <a href="#" className="hover:text-amber-400 transition-colors duration-200">
+              <a href="https://www.linkedin.com/company/edu-hawk-worldwide/?viewAsMember=true" className="hover:text-amber-400 transition-colors duration-200">
                 <FaLinkedinIn />
               </a>
             </div>
@@ -129,9 +129,9 @@ export default function Footer() {
 
             <div className="mt-6 text-sm">
               <div className="text-gray-400 mb-1.5">Contact Us</div>
-              <div className="text-white">+91 98765 43210</div>
-              <div className="text-white mt-1">info@eduhawk.com</div>
-              <div className="text-gray-400 mt-3 text-xs">Indore, Madhya Pradesh, India</div>
+              <div className="text-white">+91 9630736070</div>
+              <div className="text-white mt-1">eduhawk.global@gmail.com</div>
+              <div className="text-gray-400 mt-3 text-xs">Bhopal, Madhya Pradesh, India</div>
             </div>
           </div>
         </div>

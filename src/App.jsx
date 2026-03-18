@@ -152,7 +152,7 @@ const router = createBrowserRouter([
 
 
       {
-        path: "mbbs-india/northern/delhi/aiims-delhi",
+        path: "allcollege",
         element: <AllIndia />,
       },
 
