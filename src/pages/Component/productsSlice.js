@@ -5,8 +5,8 @@
 //   'products/fetchProducts',
 //   async (_, { rejectWithValue }) => {
 //     try {
-//       const res = await fetch('http://localhost:8000/api/product');
-      
+//       const res = await fetch('https://eduhawk-server-urpn.onrender.com/api/product');
+
 //       if (!res.ok) {
 //         throw new Error(`HTTP ${res.status} – ${res.statusText}`);
 //       }
@@ -89,49 +89,51 @@
 
 // export default productsSlice.reducer;
 
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Async thunk to fetch products
 export const fetchProducts = createAsyncThunk(
-  'products/fetchProducts',
+  "products/fetchProducts",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch('http://localhost:8000/api/product');
+      const res = await fetch(
+        "https://eduhawk-server-urpn.onrender.com/api/product",
+      );
 
       if (!res.ok) {
         throw new Error(`HTTP ${res.status} – ${res.statusText}`);
       }
 
       const json = await res.json();
-      console.log('Products raw response:', json);
+      console.log("Products raw response:", json);
 
       // Handle different possible API shapes safely
       const productArray = Array.isArray(json)
         ? json
         : Array.isArray(json?.data)
-        ? json.data
-        : json?.products ?? json?.results ?? [];
+          ? json.data
+          : (json?.products ?? json?.results ?? []);
 
       return productArray;
     } catch (err) {
-      return rejectWithValue(err.message || 'Failed to load products');
+      return rejectWithValue(err.message || "Failed to load products");
     }
-  }
+  },
 );
 
 const initialState = {
-  products: [],              // all fetched products
-  categories: ['All'],       // derived from products
-  status: 'idle',            // 'idle' | 'loading' | 'succeeded' | 'failed'
+  products: [], // all fetched products
+  categories: ["All"], // derived from products
+  status: "idle", // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
-  activeCategory: 'All',
-  searchQuery: '',           // for searching by name/title
-  currentPage: 1,            // client-side pagination
-  itemsPerPage: 9,           // adjust as needed (6, 9, 12, 15, 20, etc.)
+  activeCategory: "All",
+  searchQuery: "", // for searching by name/title
+  currentPage: 1, // client-side pagination
+  itemsPerPage: 9, // adjust as needed (6, 9, 12, 15, 20, etc.)
 };
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {
     setActiveCategory: (state, action) => {
@@ -146,34 +148,34 @@ const productsSlice = createSlice({
       state.currentPage = Number(action.payload);
     },
     resetFilters: (state) => {
-      state.activeCategory = 'All';
-      state.searchQuery = '';
+      state.activeCategory = "All";
+      state.searchQuery = "";
       state.currentPage = 1;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
-        state.status = 'loading';
+        state.status = "loading";
         state.error = null;
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.status = 'succeeded';
+        state.status = "succeeded";
         state.products = action.payload;
 
         // Derive unique categories only once when products are loaded
         const uniqueCategories = [
-          'All',
+          "All",
           ...new Set(
             action.payload
               .map((p) => p?.category?.name ?? null)
-              .filter(Boolean)
+              .filter(Boolean),
           ),
         ];
         state.categories = uniqueCategories;
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        state.status = 'failed';
+        state.status = "failed";
         state.error = action.payload;
       });
   },
@@ -201,17 +203,12 @@ export const selectItemsPerPage = (state) => state.products.itemsPerPage;
 
 // Combined selector: filtered + searched + paginated
 export const selectVisibleProducts = (state) => {
-  const {
-    products,
-    activeCategory,
-    searchQuery,
-    currentPage,
-    itemsPerPage,
-  } = state.products;
+  const { products, activeCategory, searchQuery, currentPage, itemsPerPage } =
+    state.products;
 
   // 1. Category filter
   let result = products;
-  if (activeCategory !== 'All') {
+  if (activeCategory !== "All") {
     result = result.filter((p) => p?.category?.name === activeCategory);
   }
 
@@ -219,7 +216,7 @@ export const selectVisibleProducts = (state) => {
   if (searchQuery) {
     const lowerQuery = searchQuery.toLowerCase();
     result = result.filter((p) =>
-      (p?.name || '').toLowerCase().includes(lowerQuery)
+      (p?.name || "").toLowerCase().includes(lowerQuery),
     );
   }
 

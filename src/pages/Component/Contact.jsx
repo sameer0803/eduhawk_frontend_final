@@ -1,4 +1,3 @@
-
 // // // // import React from 'react';
 // // // // import { motion } from 'framer-motion';
 
@@ -200,7 +199,6 @@
 // // // //                   referrerPolicy="no-referrer-when-downgrade"
 // // // //                 ></iframe>
 
-               
 // // // //               </div>
 
 // // // //               <h5 className="text-xl font-semibold text-[#02145a] mb-4">Quick Contact</h5>
@@ -282,14 +280,11 @@
 // // // //         </div>
 // // // //       </section>
 
-     
- 
 // // // //     </div>
 // // // //   );
 // // // // };
 
 // // // // export default Contact;
-
 
 // // // import React, { useState } from 'react';
 // // // import { motion } from 'framer-motion';
@@ -368,7 +363,7 @@
 // // //     setStatus({ loading: true, message: '', error: false });
 
 // // //     try {
-// // //       const response = await fetch('http://localhost:8000/api/contact/create', {
+// // //       const response = await fetch('https://eduhawk-server-urpn.onrender.com/api/contact/create', {
 // // //         method: 'POST',
 // // //         headers: {
 // // //           'Content-Type': 'application/json',
@@ -674,7 +669,6 @@
 
 // // // export default Contact;
 
-
 // // import React, { useState } from 'react';
 // // import { motion } from 'framer-motion';
 
@@ -756,7 +750,7 @@
 // //     setStatus({ loading: true, message: '', error: false });
 
 // //     try {
-// //       const response = await fetch('http://localhost:8000/api/contact/create', {
+// //       const response = await fetch('https://eduhawk-server-urpn.onrender.com/api/contact/create', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -942,8 +936,8 @@
 // //                     whileHover={{ scale: status.loading ? 1 : 1.03 }}
 // //                     whileTap={{ scale: status.loading ? 1 : 0.97 }}
 // //                     className={`w-full bg-[#02145a] text-white py-4 rounded-lg font-semibold text-lg shadow-md transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden
-// //                       ${status.loading 
-// //                         ? 'cursor-not-allowed bg-[#0f3a9e] scale-[1.01]' 
+// //                       ${status.loading
+// //                         ? 'cursor-not-allowed bg-[#0f3a9e] scale-[1.01]'
 // //                         : 'hover:bg-[#0a2a8c] hover:shadow-xl hover:scale-[1.03]'}`}
 // //                   >
 // //                     {status.loading ? (
@@ -1082,7 +1076,6 @@
 
 // // export default Contact;
 
-
 // // import React, { useState, useRef } from 'react';
 // // import { motion } from 'framer-motion';
 // // import ReCAPTCHA from 'react-google-recaptcha';
@@ -1178,7 +1171,7 @@
 // //     }
 
 // //     try {
-// //       const response = await fetch('http://localhost:8000/api/contact/create', {
+// //       const response = await fetch('https://eduhawk-server-urpn.onrender.com/api/contact/create', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -1379,8 +1372,8 @@
 // //                     whileHover={{ scale: status.loading ? 1 : 1.03 }}
 // //                     whileTap={{ scale: status.loading ? 1 : 0.97 }}
 // //                     className={`w-full bg-[#02145a] text-white py-4 rounded-lg font-semibold text-lg shadow-md transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden
-// //                       ${status.loading 
-// //                         ? 'cursor-not-allowed bg-[#0f3a9e] scale-[1.01]' 
+// //                       ${status.loading
+// //                         ? 'cursor-not-allowed bg-[#0f3a9e] scale-[1.01]'
 // //                         : 'hover:bg-[#0a2a8c] hover:shadow-xl hover:scale-[1.03]'}`}
 // //                   >
 // //                     {status.loading ? (
@@ -1519,7 +1512,6 @@
 
 // // export default Contact;
 
-
 // // import React, { useState, useRef } from 'react';
 // // import { motion } from 'framer-motion';
 // // import ReCAPTCHA from 'react-google-recaptcha';
@@ -1615,7 +1607,7 @@
 // //     }
 
 // //     try {
-// //       const response = await fetch('http://localhost:8000/api/contact/create', {
+// //       const response = await fetch('https://eduhawk-server-urpn.onrender.com/api/contact/create', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -1816,8 +1808,8 @@
 // //                     whileHover={{ scale: status.loading ? 1 : 1.03 }}
 // //                     whileTap={{ scale: status.loading ? 1 : 0.97 }}
 // //                     className={`w-full bg-[#02145a] text-white py-4 rounded-lg font-semibold text-lg shadow-md transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden
-// //                       ${status.loading 
-// //                         ? 'cursor-not-allowed bg-[#0f3a9e] scale-[1.01]' 
+// //                       ${status.loading
+// //                         ? 'cursor-not-allowed bg-[#0f3a9e] scale-[1.01]'
 // //                         : 'hover:bg-[#0a2a8c] hover:shadow-xl hover:scale-[1.03]'}`}
 // //                   >
 // //                     {status.loading ? (
@@ -1956,7 +1948,6 @@
 
 // // export default Contact;
 
-
 // import React, { useState, useRef } from 'react';
 // import { motion } from 'framer-motion';
 // import ReCAPTCHA from 'react-google-recaptcha';
@@ -1999,7 +1990,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://localhost:8000/api/contact/create', {
+//       const response = await fetch('https://eduhawk-server-urpn.onrender.com/api/contact/create', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({
@@ -2227,7 +2218,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://localhost:8000/api/contact/create', {
+//       const response = await fetch('https://eduhawk-server-urpn.onrender.com/api/contact/create', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({
@@ -2484,11 +2475,9 @@
 
 // export default Contact;
 
-
-
-import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import ReCAPTCHA from 'react-google-recaptcha';
+import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import ReCAPTCHA from "react-google-recaptcha";
 
 // Animation Variants (unchanged)
 const containerVariants = {
@@ -2503,7 +2492,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: "easeOut" },
   },
 };
 const slideLeft = {
@@ -2511,7 +2500,7 @@ const slideLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.9, ease: 'easeOut' },
+    transition: { duration: 0.9, ease: "easeOut" },
   },
 };
 const slideRight = {
@@ -2519,23 +2508,23 @@ const slideRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.9, ease: 'easeOut' },
+    transition: { duration: 0.9, ease: "easeOut" },
   },
 };
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    subject: 'General Inquiry',   // ← default value
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "General Inquiry", // ← default value
+    message: "",
   });
 
   const [status, setStatus] = useState({
     loading: false,
-    message: '',
+    message: "",
     error: false,
   });
 
@@ -2548,61 +2537,64 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ loading: true, message: '', error: false });
+    setStatus({ loading: true, message: "", error: false });
 
     const captchaToken = recaptchaRef.current?.getValue();
     if (!captchaToken) {
       setStatus({
         loading: false,
-        message: 'Please complete the reCAPTCHA verification',
+        message: "Please complete the reCAPTCHA verification",
         error: true,
       });
       return;
     }
 
     try {
-      const response = await fetch('http://localhost:8000/api/contact/create', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: `${formData.firstName} ${formData.lastName}`.trim(),
-          email: formData.email,
-          phone: formData.phone || undefined,
-          subject: formData.subject,           // ← now dynamic
-          message: formData.message,
-          captcha: captchaToken,
-        }),
-      });
+      const response = await fetch(
+        "https://eduhawk-server-urpn.onrender.com/api/contact/create",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: `${formData.firstName} ${formData.lastName}`.trim(),
+            email: formData.email,
+            phone: formData.phone || undefined,
+            subject: formData.subject, // ← now dynamic
+            message: formData.message,
+            captcha: captchaToken,
+          }),
+        },
+      );
 
       const data = await response.json();
 
       if (response.ok) {
         setStatus({
           loading: false,
-          message: 'Thank you! Your message has been sent successfully.',
+          message: "Thank you! Your message has been sent successfully.",
           error: false,
         });
         setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          subject: 'General Inquiry',        // reset to default
-          message: '',
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "General Inquiry", // reset to default
+          message: "",
         });
         recaptchaRef.current?.reset();
       } else {
         setStatus({
           loading: false,
-          message: data.message || 'Failed to send message. Please try again.',
+          message: data.message || "Failed to send message. Please try again.",
           error: true,
         });
       }
     } catch (err) {
-      console.error('Submit error:', err);
+      console.error("Submit error:", err);
       setStatus({
         loading: false,
-        message: 'Network error. Please check your internet connection.',
+        message: "Network error. Please check your internet connection.",
         error: true,
       });
     }
@@ -2618,14 +2610,14 @@ const Contact = () => {
         className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: "url('/Images/Contact Us/student.jpg')",
-          backgroundBlendMode: 'multiply',
-          backgroundColor: 'rgba(0,0,0,0.55)',
+          backgroundBlendMode: "multiply",
+          backgroundColor: "rgba(0,0,0,0.55)",
         }}
       >
         <motion.h1
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
+          transition={{ duration: 1.1, ease: "easeOut", delay: 0.4 }}
           className="text-6xl md:text-8xl font-bold text-white tracking-wider drop-shadow-2xl"
         >
           CONTACT
@@ -2643,19 +2635,28 @@ const Contact = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* LEFT SIDE - FORM */}
-            <motion.div variants={slideLeft} className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
+            <motion.div
+              variants={slideLeft}
+              className="bg-white rounded-2xl shadow-xl p-8 lg:p-10"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-[#02145a] mb-6">
                 Get In Touch
               </h2>
               <p className="text-gray-600 mb-8">
-                We're here to assist you with any inquiries. Feel free to reach out!
+                We're here to assist you with any inquiries. Feel free to reach
+                out!
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name fields */}
-                <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  variants={containerVariants}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                >
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      First Name
+                    </label>
                     <input
                       type="text"
                       name="firstName"
@@ -2667,7 +2668,9 @@ const Contact = () => {
                     />
                   </motion.div>
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Last Name
+                    </label>
                     <input
                       type="text"
                       name="lastName"
@@ -2681,9 +2684,14 @@ const Contact = () => {
                 </motion.div>
 
                 {/* Email + Phone + EVENT TYPE */}
-                <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  variants={containerVariants}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                >
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Email
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -2696,7 +2704,9 @@ const Contact = () => {
                   </motion.div>
 
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Phone
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -2725,14 +2735,18 @@ const Contact = () => {
                     <option value="Wedding">Wedding</option>
                     <option value="Exhibition">Exhibition</option>
                     <option value="Conference">Conference</option>
-                    <option value="Political/Govt">Political / Government</option>
+                    <option value="Political/Govt">
+                      Political / Government
+                    </option>
                     <option value="Other">Other</option>
                   </select>
                 </motion.div>
 
                 {/* Message */}
                 <motion.div variants={itemVariants}>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     rows={5}
@@ -2745,7 +2759,10 @@ const Contact = () => {
                 </motion.div>
 
                 {/* reCAPTCHA */}
-                <motion.div variants={itemVariants} className="flex justify-center md:justify-start pt-4">
+                <motion.div
+                  variants={itemVariants}
+                  className="flex justify-center md:justify-start pt-4"
+                >
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey="6Lf6cY4sAAAAAE1CYlnILZ9OJYWn6wK8ieq_2awj"
@@ -2759,7 +2776,7 @@ const Contact = () => {
                   <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`text-center font-medium ${status.error ? 'text-red-600' : 'text-green-600'}`}
+                    className={`text-center font-medium ${status.error ? "text-red-600" : "text-green-600"}`}
                   >
                     {status.message}
                   </motion.p>
@@ -2773,13 +2790,17 @@ const Contact = () => {
                     whileHover={{ scale: status.loading ? 1 : 1.03 }}
                     whileTap={{ scale: status.loading ? 1 : 0.97 }}
                     className={`w-full bg-[#02145a] text-white py-4 rounded-lg font-semibold text-lg shadow-md transition-all duration-300 flex items-center justify-center gap-3
-                      ${status.loading ? 'cursor-not-allowed bg-[#0f3a9e]' : 'hover:bg-[#0a2a8c] hover:shadow-xl'}`}
+                      ${status.loading ? "cursor-not-allowed bg-[#0f3a9e]" : "hover:bg-[#0a2a8c] hover:shadow-xl"}`}
                   >
                     {status.loading ? (
                       <div className="flex items-center gap-3">
                         <motion.div
                           animate={{ rotate: 360 }}
-                          transition={{ duration: 1.8, repeat: Infinity, ease: 'linear' }}
+                          transition={{
+                            duration: 1.8,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
                           className="text-2xl"
                         >
                           🤖
@@ -2787,7 +2808,7 @@ const Contact = () => {
                         <span>Sending...</span>
                       </div>
                     ) : (
-                      'Send Message'
+                      "Send Message"
                     )}
                   </motion.button>
                 </motion.div>
@@ -2795,8 +2816,13 @@ const Contact = () => {
             </motion.div>
 
             {/* RIGHT SIDE – Map & Info (unchanged) */}
-            <motion.div variants={slideRight} className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
-              <h3 className="text-2xl font-bold text-[#02145a] mb-4">Our Main Office</h3>
+            <motion.div
+              variants={slideRight}
+              className="bg-white rounded-2xl shadow-xl p-8 lg:p-10"
+            >
+              <h3 className="text-2xl font-bold text-[#02145a] mb-4">
+                Our Main Office
+              </h3>
               <p className="text-gray-700 mb-6">
                 I/J-1 Chandi Vyapar Bhawan, Exhibition Road, Patna - 800001
               </p>
@@ -2811,7 +2837,9 @@ const Contact = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-              <h5 className="text-xl font-semibold text-[#02145a] mb-4">Quick Contact</h5>
+              <h5 className="text-xl font-semibold text-[#02145a] mb-4">
+                Quick Contact
+              </h5>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <i className="fa-solid fa-phone mr-3 text-[#02145a]"></i>

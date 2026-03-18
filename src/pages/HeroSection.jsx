@@ -1,7 +1,3 @@
-
-
-
-
 // import { useState, useEffect } from "react";
 
 // // Icons (two different icons repeated — that's how it was in original)
@@ -160,7 +156,6 @@
 
 //   const [isOpen, setIsOpen] = useState(true);
 
-
 //    const handleChange = (e) => {
 //     setFormData({
 //       ...formData,
@@ -172,7 +167,7 @@
 //     e.preventDefault();
 
 //     try {
-//       const res = await fetch("http://localhost:8000/api/query/create", {
+//       const res = await fetch("https://eduhawk-server-urpn.onrender.com/api/query/create", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -209,7 +204,6 @@
 //   }, []);
 
 //   // Testimonial carousel auto-slide
-
 
 //   // const handleSubmit = (e) => {
 //   //   e.preventDefault();
@@ -354,8 +348,6 @@
 //               <label className="block text-sm font-medium text-gray-700 mb-1.5">
 //                 Interested Countries (can select multiple)
 //               </label>
-            
-
 
 //                <select
 //                 required
@@ -374,7 +366,7 @@
 //             </div>
 
 //             <button
-              
+
 //               onClick={handleSubmit}
 //               className="w-full py-4 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 mt-2"
 //             >
@@ -1268,11 +1260,14 @@ export default function HeroSection() {
 
   // ── Shared API call ────────────────────────────────────────────────────────
   const submitToApi = async (payload) => {
-    const res = await fetch("http://localhost:8000/api/query/create", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const res = await fetch(
+      "https://eduhawk-server-urpn.onrender.com/api/query/create",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      },
+    );
     return res.json();
   };
 
@@ -1304,7 +1299,7 @@ export default function HeroSection() {
         name: contactForm.name,
         email: contactForm.email,
         phone: contactForm.phone,
-        city: "",          // not collected in contact form
+        city: "", // not collected in contact form
         country: contactForm.country,
       };
       const data = await submitToApi(payload);
@@ -1330,12 +1325,10 @@ export default function HeroSection() {
 
   return (
     <div className="min-h-screen bg-white font-sans">
-
       {/* ── POPUP MODAL ──────────────────────────────────────────────────── */}
       {isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/65 p-4 sm:p-6">
           <div className="relative w-full max-w-4xl max-h-[90vh] sm:max-h-[88vh] rounded-2xl bg-white shadow-2xl overflow-hidden flex flex-col">
-
             {/* Close button */}
             <button
               onClick={() => setIsOpen(false)}
@@ -1346,7 +1339,6 @@ export default function HeroSection() {
             </button>
 
             <div className="flex flex-col lg:flex-row h-full overflow-hidden">
-
               {/* LEFT – benefits panel */}
               <div className="lg:w-5/12 bg-gradient-to-br from-[#0a2342] via-[#1a4a7a] to-[#0d3460] text-white p-8 sm:p-10 flex-col justify-between hidden lg:flex">
                 <div>
@@ -1355,87 +1347,139 @@ export default function HeroSection() {
                     Your MBBS Abroad Journey Starts Here
                   </h2>
                   <p className="text-teal-100 text-base mb-8">
-                    Trusted by 2,000+ Indian students • Transparent process • NMC-approved universities only
+                    Trusted by 2,000+ Indian students • Transparent process •
+                    NMC-approved universities only
                   </p>
                   <ul className="space-y-5 text-base">
-                    <li className="flex items-start gap-3"><span className="text-2xl">🎯</span><span>Free expert 1-on-1 counselling</span></li>
-                    <li className="flex items-start gap-3"><span className="text-2xl">🔍</span><span>Best university match as per your NEET &amp; budget</span></li>
-                    <li className="flex items-start gap-3"><span className="text-2xl">🛡️</span><span>End-to-end support: visa, travel, FMGE guidance</span></li>
-                    <li className="flex items-start gap-3"><span className="text-2xl">💰</span><span>No hidden charges – 100% transparent</span></li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-2xl">🎯</span>
+                      <span>Free expert 1-on-1 counselling</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-2xl">🔍</span>
+                      <span>
+                        Best university match as per your NEET &amp; budget
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-2xl">🛡️</span>
+                      <span>
+                        End-to-end support: visa, travel, FMGE guidance
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-2xl">💰</span>
+                      <span>No hidden charges – 100% transparent</span>
+                    </li>
                   </ul>
                 </div>
                 <div className="mt-1 text-sm text-teal-200">
                   <p className="font-medium mb-2">Popular Destinations</p>
                   <div className="flex flex-wrap gap-1">
-                    {["Russia", "Georgia", "Kazakhstan", "Kyrgyzstan"].map((c) => (
-                      <span key={c} className="bg-white/20 px-3 py-1 rounded-full text-xs">{c}</span>
-                    ))}
+                    {["Russia", "Georgia", "Kazakhstan", "Kyrgyzstan"].map(
+                      (c) => (
+                        <span
+                          key={c}
+                          className="bg-white/20 px-3 py-1 rounded-full text-xs"
+                        >
+                          {c}
+                        </span>
+                      ),
+                    )}
                   </div>
                 </div>
               </div>
 
               {/* RIGHT – scrollable form */}
               <div className="flex-1 overflow-y-auto px-6 py-8 sm:px-10 sm:py-10 scrollbar-thin scrollbar-thumb-teal-400 scrollbar-track-transparent">
-
                 {/* Mobile header */}
                 <div className="lg:hidden text-center mb-6">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2">MBBS Abroad Counselling</h2>
-                  <p className="text-gray-600 text-sm">Free • Expert • Trusted by 2000+ students</p>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                    MBBS Abroad Counselling
+                  </h2>
+                  <p className="text-gray-600 text-sm">
+                    Free • Expert • Trusted by 2000+ students
+                  </p>
                 </div>
 
                 {/* ── MODAL FORM ── */}
                 <form onSubmit={handleModalSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Full Name *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Full Name *
+                      </label>
                       <input
                         type="text"
                         name="name"
                         required
                         placeholder="Enter your full name"
                         value={modalForm.name}
-                        onChange={(e) => setModalForm({ ...modalForm, name: e.target.value })}
+                        onChange={(e) =>
+                          setModalForm({ ...modalForm, name: e.target.value })
+                        }
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none transition bg-gray-50"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                        Email *
+                      </label>
                       <input
                         type="email"
                         name="email"
                         required
                         placeholder="your.email@gmail.com"
                         value={modalForm.email}
-                        onChange={(e) => setModalForm({ ...modalForm, email: e.target.value })}
+                        onChange={(e) =>
+                          setModalForm({ ...modalForm, email: e.target.value })
+                        }
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none transition bg-gray-50"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone Number (+91) *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Phone Number (+91) *
+                    </label>
                     <input
                       type="tel"
                       name="phone"
                       required
                       placeholder="+91 98765 43210"
                       value={modalForm.phone}
-                      onChange={(e) => setModalForm({ ...modalForm, phone: e.target.value })}
+                      onChange={(e) =>
+                        setModalForm({ ...modalForm, phone: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none transition bg-gray-50"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Current City *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                      Current City *
+                    </label>
                     <select
                       name="city"
                       required
                       value={modalForm.city}
-                      onChange={(e) => setModalForm({ ...modalForm, city: e.target.value })}
+                      onChange={(e) =>
+                        setModalForm({ ...modalForm, city: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none bg-gray-50"
                     >
-                      <option value="" disabled>Select city</option>
-                      {["Indore", "Bhopal", "Delhi", "Mumbai", "Pune", "Other"].map((c) => (
+                      <option value="" disabled>
+                        Select city
+                      </option>
+                      {[
+                        "Indore",
+                        "Bhopal",
+                        "Delhi",
+                        "Mumbai",
+                        "Pune",
+                        "Other",
+                      ].map((c) => (
                         <option key={c}>{c}</option>
                       ))}
                     </select>
@@ -1449,11 +1493,24 @@ export default function HeroSection() {
                       name="country"
                       required
                       value={modalForm.country}
-                      onChange={(e) => setModalForm({ ...modalForm, country: e.target.value })}
+                      onChange={(e) =>
+                        setModalForm({ ...modalForm, country: e.target.value })
+                      }
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/40 outline-none bg-gray-50"
                     >
-                      <option value="" disabled>Select country</option>
-                      {["Russia", "Georgia", "Kazakhstan", "Kyrgyzstan", "Uzbekistan", "Philippines", "Nepal", "Bangladesh"].map((c) => (
+                      <option value="" disabled>
+                        Select country
+                      </option>
+                      {[
+                        "Russia",
+                        "Georgia",
+                        "Kazakhstan",
+                        "Kyrgyzstan",
+                        "Uzbekistan",
+                        "Philippines",
+                        "Nepal",
+                        "Bangladesh",
+                      ].map((c) => (
                         <option key={c}>{c}</option>
                       ))}
                     </select>
@@ -1541,8 +1598,12 @@ export default function HeroSection() {
               { n: "100%", l: "NMC Approved" },
             ].map((s, i) => (
               <div key={i} className="text-center">
-                <div className="text-[#d4a853] text-4xl md:text-5xl font-extrabold">{s.n}</div>
-                <div className="text-[#0a2342] text-sm md:text-base uppercase tracking-wider mt-2 font-semibold">{s.l}</div>
+                <div className="text-[#d4a853] text-4xl md:text-5xl font-extrabold">
+                  {s.n}
+                </div>
+                <div className="text-[#0a2342] text-sm md:text-base uppercase tracking-wider mt-2 font-semibold">
+                  {s.l}
+                </div>
               </div>
             ))}
           </div>
@@ -1563,8 +1624,9 @@ export default function HeroSection() {
             <span className="text-[#d4a853]">Starts with Right Guidance</span>
           </h1>
           <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 md:mb-12 font-light leading-relaxed">
-            Trusted MBBS abroad consultants for Indian students. Transparent counselling, no hidden charges, and
-            end-to-end support from application to post-arrival.
+            Trusted MBBS abroad consultants for Indian students. Transparent
+            counselling, no hidden charges, and end-to-end support from
+            application to post-arrival.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-5 md:gap-8">
             <button className="bg-gradient-to-r from-[#d4a853] to-[#f0c070] text-[#0a2342] font-bold uppercase tracking-wider px-10 py-4 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base">
@@ -1582,40 +1644,69 @@ export default function HeroSection() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
             <div className="w-14 bg-gradient-to-r from-[#d4a853] to-[#f0c070] mb-4 h-1" />
-            <p className="text-[#d4a853] uppercase tracking-widest text-xs font-medium mb-3">Who We Are</p>
+            <p className="text-[#d4a853] uppercase tracking-widest text-xs font-medium mb-3">
+              Who We Are
+            </p>
             <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-[#0a2342] leading-tight mb-5">
-              MBBS counselling &<br />consultancy services.
+              MBBS counselling &<br />
+              consultancy services.
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4 text-base">
-              <strong className="text-[#0a2342] font-semibold">Edu-Hawk Worldwide</strong> is a professional team of
-              experienced education advisors specializing in MBBS counselling abroad services. We guide Indian students
-              toward admission in NMC-approved medical universities through transparent &amp; ethical counselling.
+              <strong className="text-[#0a2342] font-semibold">
+                Edu-Hawk Worldwide
+              </strong>{" "}
+              is a professional team of experienced education advisors
+              specializing in MBBS counselling abroad services. We guide Indian
+              students toward admission in NMC-approved medical universities
+              through transparent &amp; ethical counselling.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4 text-base">
-              As trusted overseas medical education consultants, we provide personalized guidance based on your academic
-              profile, budget, and long-term career goals — ensuring the right country, university, and eligibility for
-              practice in India.
+              As trusted overseas medical education consultants, we provide
+              personalized guidance based on your academic profile, budget, and
+              long-term career goals — ensuring the right country, university,
+              and eligibility for practice in India.
             </p>
             <p className="text-gray-700 leading-relaxed text-base">
-              We believe MBBS abroad should be a <em>planned and safe decision</em>, supported by correct guidance,
+              We believe MBBS abroad should be a{" "}
+              <em>planned and safe decision</em>, supported by correct guidance,
               honest counselling — no hidden charges, only genuine information.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { icon: "🎯", title: "Personalized Counselling", desc: "Guidance matched to your profile & budget" },
-              { icon: "✅", title: "NMC Approved Only", desc: "Only recognized universities recommended" },
-              { icon: "💰", title: "No Hidden Charges", desc: "100% transparent fee structure" },
-              { icon: "🤝", title: "End-to-End Support", desc: "Application to post-arrival assistance" },
+              {
+                icon: "🎯",
+                title: "Personalized Counselling",
+                desc: "Guidance matched to your profile & budget",
+              },
+              {
+                icon: "✅",
+                title: "NMC Approved Only",
+                desc: "Only recognized universities recommended",
+              },
+              {
+                icon: "💰",
+                title: "No Hidden Charges",
+                desc: "100% transparent fee structure",
+              },
+              {
+                icon: "🤝",
+                title: "End-to-End Support",
+                desc: "Application to post-arrival assistance",
+              },
             ].map((item, i) => (
               <div
                 key={i}
                 className="bg-white rounded-xl p-5 border border-[#e8d5b0]/60 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center"
               >
                 <div className="text-4xl mb-3">{item.icon}</div>
-                <h4 className="font-bold text-[#0a2342] mb-2 text-base">{item.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                <h4 className="font-bold text-[#0a2342] mb-2 text-base">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -1627,11 +1718,23 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm mx-auto md:max-w-none">
-              <img src={univercity} alt="MBBS Admission Abroad" className="w-full h-48 object-cover" />
+              <img
+                src={univercity}
+                alt="MBBS Admission Abroad"
+                className="w-full h-48 object-cover"
+              />
               <div className="p-6">
-                <h5 className="text-xl font-bold text-gray-800 mb-3">MBBS Admission in Abroad</h5>
-                <p className="text-gray-600 mb-6">Expert Assistance for MBBS Admission in Renowned Abroad Institutions.</p>
-                <a href="/contact" className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition">
+                <h5 className="text-xl font-bold text-gray-800 mb-3">
+                  MBBS Admission in Abroad
+                </h5>
+                <p className="text-gray-600 mb-6">
+                  Expert Assistance for MBBS Admission in Renowned Abroad
+                  Institutions.
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition"
+                >
                   Get In Touch
                 </a>
               </div>
@@ -1640,17 +1743,22 @@ export default function HeroSection() {
 
           <div className="md:col-span-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-blue-950 text-white text-center py-4 font-semibold text-lg">WHAT WE PROVIDE</div>
+              <div className="bg-blue-950 text-white text-center py-4 font-semibold text-lg">
+                WHAT WE PROVIDE
+              </div>
               <div className="p-6">
                 <blockquote className="text-gray-700 italic mb-6">
                   <p className="mb-4">
-                    With our assistance, you can bid farewell to the complexities often associated with MBBS admission
-                    abroad. We streamline the entire process, sparing you from any unnecessary hassle and ensuring a
-                    seamless experience every step of the way.
+                    With our assistance, you can bid farewell to the
+                    complexities often associated with MBBS admission abroad. We
+                    streamline the entire process, sparing you from any
+                    unnecessary hassle and ensuring a seamless experience every
+                    step of the way.
                   </p>
                   <footer className="text-gray-500 text-sm not-italic">
-                    Trust us to be your reliable partner in realizing your aspirations for MBBS admission in foreign
-                    universities. Let's embark on this transformative journey together.{" "}
+                    Trust us to be your reliable partner in realizing your
+                    aspirations for MBBS admission in foreign universities.
+                    Let's embark on this transformative journey together.{" "}
                     <cite className="font-medium">— EDU HAWK</cite>
                   </footer>
                 </blockquote>
@@ -1679,14 +1787,40 @@ export default function HeroSection() {
         <div className="container mx-auto px-4 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {[
-              { icon: icon1, alt: "Application Process", title: "Application Process", desc: "We believe that your entire MBBS journey is our responsibility—from the beginning until you settle in your new college. We provide complete student assistance, including application support, invitation letters, pre-departure briefings, and post-arrival support. Our goal is not just admission but helping students choose the right pathways and prepare for FMGE/NExT eligibility in India. We provide one-to-one personalised guidance to every student, understanding that each student has different goals and needs..." },
-              { icon: icon2, alt: "Perfect Counselling", title: "Perfect Counselling", desc: "Begin your journey towards your dreams with Edu Hawk Worldwide, your trusted partner for MBBS abroad. If you are planning to study MBBS abroad, our expert MBBS abroad counselling team guides you at every step. We help you choose the right country and university based on your budget, NEET score, and career goals. Our MBBS abroad counseling also supports you with admissions, the visa process, education loans, and insurance guidance. With proper planning and transparent advice, you can confidently study MBBS abroad and build a successful medical career. Your dream of MBBS abroad begins here with the right guidance." },
-              { icon: icon3, alt: "Accurate Information", title: "Accurate Information", desc: "At Edu Hawk Worldwide, we are committed to providing accurate and reliable information for students planning to study abroad. We carefully collect verified details about universities, including campus environment, eligibility criteria, qualifications, application process, admission requirements, and arrival procedures. Our team uses trusted sources to ensure every piece of information is clear and up-to-date. We understand that choosing the right university is a big decision, so we focus on transparency and clarity. With complete and precise guidance, we help you make confident and informed choices for your educational journey." },
-              { icon: icon4, alt: "Proper Assistance", title: "Proper Assistance", desc: "At Edu Hawk Worldwide, we provide complete support for students planning to study MBBS abroad. Our expert MBBS abroad counselling ensures you receive step-by-step guidance throughout the process. From helping you study MBBS abroad to final university enrollment, we stay with you at every stage. Our services for MBBS abroad include admission assistance, visa processing, travel arrangements, scholarship guidance, and accommodation support. Through professional MBBS abroad counselling, we also guide you during departure and arrival procedures so your transition is smooth. If you face any challenge while planning to study MBBS abroad, our expert is always ready to support you. Your success in MBBS abroad is our top priority." },
+              {
+                icon: icon1,
+                alt: "Application Process",
+                title: "Application Process",
+                desc: "We believe that your entire MBBS journey is our responsibility—from the beginning until you settle in your new college. We provide complete student assistance, including application support, invitation letters, pre-departure briefings, and post-arrival support. Our goal is not just admission but helping students choose the right pathways and prepare for FMGE/NExT eligibility in India. We provide one-to-one personalised guidance to every student, understanding that each student has different goals and needs...",
+              },
+              {
+                icon: icon2,
+                alt: "Perfect Counselling",
+                title: "Perfect Counselling",
+                desc: "Begin your journey towards your dreams with Edu Hawk Worldwide, your trusted partner for MBBS abroad. If you are planning to study MBBS abroad, our expert MBBS abroad counselling team guides you at every step. We help you choose the right country and university based on your budget, NEET score, and career goals. Our MBBS abroad counseling also supports you with admissions, the visa process, education loans, and insurance guidance. With proper planning and transparent advice, you can confidently study MBBS abroad and build a successful medical career. Your dream of MBBS abroad begins here with the right guidance.",
+              },
+              {
+                icon: icon3,
+                alt: "Accurate Information",
+                title: "Accurate Information",
+                desc: "At Edu Hawk Worldwide, we are committed to providing accurate and reliable information for students planning to study abroad. We carefully collect verified details about universities, including campus environment, eligibility criteria, qualifications, application process, admission requirements, and arrival procedures. Our team uses trusted sources to ensure every piece of information is clear and up-to-date. We understand that choosing the right university is a big decision, so we focus on transparency and clarity. With complete and precise guidance, we help you make confident and informed choices for your educational journey.",
+              },
+              {
+                icon: icon4,
+                alt: "Proper Assistance",
+                title: "Proper Assistance",
+                desc: "At Edu Hawk Worldwide, we provide complete support for students planning to study MBBS abroad. Our expert MBBS abroad counselling ensures you receive step-by-step guidance throughout the process. From helping you study MBBS abroad to final university enrollment, we stay with you at every stage. Our services for MBBS abroad include admission assistance, visa processing, travel arrangements, scholarship guidance, and accommodation support. Through professional MBBS abroad counselling, we also guide you during departure and arrival procedures so your transition is smooth. If you face any challenge while planning to study MBBS abroad, our expert is always ready to support you. Your success in MBBS abroad is our top priority.",
+              },
             ].map((item, i) => (
               <div key={i} className="text-center md:text-left">
-                <img src={item.icon} alt={item.alt} className="w-24 h-24 mx-auto md:mx-0 mb-6" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">{item.title}</h3>
+                <img
+                  src={item.icon}
+                  alt={item.alt}
+                  className="w-24 h-24 mx-auto md:mx-0 mb-6"
+                />
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -1696,23 +1830,61 @@ export default function HeroSection() {
 
       {/* ── TOP MEDICAL COLLEGES ─────────────────────────────────────────── */}
       <div className="container mx-auto px-4 py-16">
-        <h4 className="text-3xl font-bold text-center text-gray-800 mb-10">TOP MEDICAL COLLEGES</h4>
+        <h4 className="text-3xl font-bold text-center text-gray-800 mb-10">
+          TOP MEDICAL COLLEGES
+        </h4>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {[
-            { name: "Peking University Health Science Center", img: topRanking1 },
-            { name: "Shanghai Jiao Tong University School of Medicine", img: topRanking2 },
-            { name: "Tsinghua University School of Medicine", img: topRanking3 },
-            { name: "First Moscow State Medical University (Sechenov)", img: topRanking4 },
-            { name: "Saint Petersburg State Medical University", img: topRanking5 },
-            { name: "Pirogov Russian National Research Medical University", img: topRanking6 },
-            { name: "University of Santo Tomas Faculty of Medicine", img: topRanking7 },
-            { name: "University of the Philippines Manila, College of Medicine", img: topRanking8 },
+            {
+              name: "Peking University Health Science Center",
+              img: topRanking1,
+            },
+            {
+              name: "Shanghai Jiao Tong University School of Medicine",
+              img: topRanking2,
+            },
+            {
+              name: "Tsinghua University School of Medicine",
+              img: topRanking3,
+            },
+            {
+              name: "First Moscow State Medical University (Sechenov)",
+              img: topRanking4,
+            },
+            {
+              name: "Saint Petersburg State Medical University",
+              img: topRanking5,
+            },
+            {
+              name: "Pirogov Russian National Research Medical University",
+              img: topRanking6,
+            },
+            {
+              name: "University of Santo Tomas Faculty of Medicine",
+              img: topRanking7,
+            },
+            {
+              name: "University of the Philippines Manila, College of Medicine",
+              img: topRanking8,
+            },
           ].map((college, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img src={college.img} alt={college.name} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <img
+                src={college.img}
+                alt={college.name}
+                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div className="p-4 w-full">
-                  <a href="#" className="text-white font-medium text-sm block hover:underline">{college.name}</a>
+                  <a
+                    href="#"
+                    className="text-white font-medium text-sm block hover:underline"
+                  >
+                    {college.name}
+                  </a>
                 </div>
               </div>
             </div>
@@ -1725,17 +1897,39 @@ export default function HeroSection() {
         <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {[
-              { img: globalImage, alt: "Medical university classroom", title: "Edu Hawk: Your Bridge to Global Education", desc: "Embarking on a journey to study MBBS abroad is a life-changing decision, and at Edu Hawk, we're dedicated to making that journey as seamless and rewarding as possible..." },
-              { img: globalImage2, alt: "Modern medical lecture hall", title: "Redefining Application Excellence: The Edu Hawk Advantage", desc: "What truly sets Edu Hawk apart is our commitment to excellence and innovation..." },
+              {
+                img: globalImage,
+                alt: "Medical university classroom",
+                title: "Edu Hawk: Your Bridge to Global Education",
+                desc: "Embarking on a journey to study MBBS abroad is a life-changing decision, and at Edu Hawk, we're dedicated to making that journey as seamless and rewarding as possible...",
+              },
+              {
+                img: globalImage2,
+                alt: "Modern medical lecture hall",
+                title:
+                  "Redefining Application Excellence: The Edu Hawk Advantage",
+                desc: "What truly sets Edu Hawk apart is our commitment to excellence and innovation...",
+              },
             ].map((card, i) => (
-              <div key={i} className="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div
+                key={i}
+                className="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+              >
                 <div className="relative overflow-hidden h-64 md:h-80">
-                  <img src={card.img} alt={card.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img
+                    src={card.img}
+                    alt={card.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-60" />
                 </div>
                 <div className="p-6 md:p-8">
-                  <h5 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 leading-tight">{card.title}</h5>
-                  <p className="text-gray-700 leading-relaxed text-base">{card.desc}</p>
+                  <h5 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 leading-tight">
+                    {card.title}
+                  </h5>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    {card.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1753,26 +1947,42 @@ export default function HeroSection() {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Country</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Average Tuition Fees (INR)</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                    Country
+                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                    Average Tuition Fees (INR)
+                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-100">
                 {mbbsOptions.map((option, index) => (
-                  <tr key={index} className="hover:bg-blue-50/50 transition-colors duration-150">
+                  <tr
+                    key={index}
+                    className="hover:bg-blue-50/50 transition-colors duration-150"
+                  >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      <a href={option.link} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 hover:underline transition-colors">
+                      <a
+                        href={option.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-700 hover:text-blue-900 hover:underline transition-colors"
+                      >
                         Study MBBS in {option.country}
                       </a>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{option.fees}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                      {option.fees}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <p className="mt-6 text-sm text-gray-500 text-center md:text-left">
-            * Fees are approximate and may vary depending on university, hostel, and other charges. Always verify latest information from official sources.
+            * Fees are approximate and may vary depending on university, hostel,
+            and other charges. Always verify latest information from official
+            sources.
           </p>
         </div>
       </section>
@@ -1782,10 +1992,15 @@ export default function HeroSection() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="w-16 h-1 bg-gradient-to-r from-[#d4a853] to-[#f0c070] mx-auto mb-5" />
-            <p className="text-[#d4a853] uppercase tracking-widest text-xs md:text-sm font-medium mb-4">Get In Touch</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0a2342] mb-6">Talk to Our Team</h2>
+            <p className="text-[#d4a853] uppercase tracking-widest text-xs md:text-sm font-medium mb-4">
+              Get In Touch
+            </p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0a2342] mb-6">
+              Talk to Our Team
+            </h2>
             <p className="text-gray-600 max-w-xl mx-auto text-base md:text-lg leading-relaxed">
-              Have questions about building your MBBS career abroad? Our counselling team is ready to help you plan the perfect path.
+              Have questions about building your MBBS career abroad? Our
+              counselling team is ready to help you plan the perfect path.
             </p>
           </div>
 
@@ -1794,23 +2009,31 @@ export default function HeroSection() {
             <form onSubmit={handleContactSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Full Name</label>
+                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">
+                    Full Name
+                  </label>
                   <input
                     className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a853] focus:ring-2 focus:ring-[#d4a853]/30 bg-gray-50 transition"
                     placeholder="John Doe"
                     value={contactForm.name}
-                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, name: e.target.value })
+                    }
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Email</label>
+                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">
+                    Email
+                  </label>
                   <input
                     type="email"
                     className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a853] focus:ring-2 focus:ring-[#d4a853]/30 bg-gray-50 transition"
                     placeholder="you@email.com"
                     value={contactForm.email}
-                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, email: e.target.value })
+                    }
                     required
                   />
                 </div>
@@ -1818,37 +2041,54 @@ export default function HeroSection() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Phone Number</label>
+                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">
+                    Phone Number
+                  </label>
                   <input
                     className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a853] focus:ring-2 focus:ring-[#d4a853]/30 bg-gray-50 transition"
                     placeholder="+91 00000 00000"
                     value={contactForm.phone}
-                    onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, phone: e.target.value })
+                    }
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Preferred Country</label>
+                  <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">
+                    Preferred Country
+                  </label>
                   <select
                     className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a853] focus:ring-2 focus:ring-[#d4a853]/30 bg-gray-50 transition"
                     value={contactForm.country}
-                    onChange={(e) => setContactForm({ ...contactForm, country: e.target.value })}
+                    onChange={(e) =>
+                      setContactForm({
+                        ...contactForm,
+                        country: e.target.value,
+                      })
+                    }
                   >
                     <option value="">Select country</option>
                     {COUNTRIES.map((c) => (
-                      <option key={c.name} value={c.name}>{c.flag} {c.name}</option>
+                      <option key={c.name} value={c.name}>
+                        {c.flag} {c.name}
+                      </option>
                     ))}
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">Message</label>
+                <label className="block text-gray-700 font-semibold mb-2 text-sm uppercase tracking-wide">
+                  Message
+                </label>
                 <textarea
                   rows={5}
                   className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a853] focus:ring-2 focus:ring-[#d4a853]/30 bg-gray-50 transition resize-y"
                   placeholder="Tell us about your academic profile, budget, and any queries..."
                   value={contactForm.message}
-                  onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                  onChange={(e) =>
+                    setContactForm({ ...contactForm, message: e.target.value })
+                  }
                 />
               </div>
 
@@ -1863,18 +2103,45 @@ export default function HeroSection() {
             {/* Contact info */}
             <div className="space-y-6">
               {[
-                { icon: "📞", title: "Phone", detail: "+91 98765 43210", sub: "Mon–Sat, 9 AM – 7 PM" },
-                { icon: "📧", title: "Email", detail: "info@eduhawk.com", sub: "We reply within 24 hours" },
-                { icon: "📍", title: "Office", detail: "Pioneer Square, New Delhi", sub: "India, 110001" },
-                { icon: "🕒", title: "Office Hours", detail: "Mon–Fri: 9 AM – 6 PM", sub: "Sat: 10 AM – 4 PM" },
+                {
+                  icon: "📞",
+                  title: "Phone",
+                  detail: "+91 98765 43210",
+                  sub: "Mon–Sat, 9 AM – 7 PM",
+                },
+                {
+                  icon: "📧",
+                  title: "Email",
+                  detail: "info@eduhawk.com",
+                  sub: "We reply within 24 hours",
+                },
+                {
+                  icon: "📍",
+                  title: "Office",
+                  detail: "Pioneer Square, New Delhi",
+                  sub: "India, 110001",
+                },
+                {
+                  icon: "🕒",
+                  title: "Office Hours",
+                  detail: "Mon–Fri: 9 AM – 6 PM",
+                  sub: "Sat: 10 AM – 4 PM",
+                },
               ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start p-6 bg-[#faf8f4] rounded-xl border border-[#e8d5b0]/70">
+                <div
+                  key={i}
+                  className="flex gap-6 items-start p-6 bg-[#faf8f4] rounded-xl border border-[#e8d5b0]/70"
+                >
                   <div className="w-14 h-14 bg-gradient-to-br from-[#d4a853] to-[#f0c070] rounded-full flex items-center justify-center text-2xl shrink-0 text-[#0a2342]">
                     {item.icon}
                   </div>
                   <div>
-                    <div className="text-[#d4a853] text-xs uppercase tracking-widest font-bold mb-1">{item.title}</div>
-                    <div className="font-semibold text-[#0a2342] text-lg">{item.detail}</div>
+                    <div className="text-[#d4a853] text-xs uppercase tracking-widest font-bold mb-1">
+                      {item.title}
+                    </div>
+                    <div className="font-semibold text-[#0a2342] text-lg">
+                      {item.detail}
+                    </div>
                     <div className="text-gray-600 text-sm mt-1">{item.sub}</div>
                   </div>
                 </div>

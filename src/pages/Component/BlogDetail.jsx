@@ -1,4 +1,3 @@
-
 // import { useState, useEffect } from 'react';
 // import { useParams, Link, useNavigate } from 'react-router-dom';
 // import { ArrowLeftIcon, ShareIcon } from '@heroicons/react/24/outline';
@@ -18,7 +17,7 @@
 //         setLoading(true);
 
 //         // ✅ Fetch single product by id
-//         const res = await fetch(`http://localhost:8000/api/product/${id}`);
+//         const res = await fetch(`https://eduhawk-server-urpn.onrender.com/api/product/${id}`);
 //         if (!res.ok) throw new Error(`HTTP ${res.status} – ${res.statusText}`);
 
 //         const json = await res.json();
@@ -31,7 +30,7 @@
 //         setPost(productData);
 
 //         // ✅ Fetch related posts (same category)
-//         const allRes = await fetch('http://localhost:8000/api/product');
+//         const allRes = await fetch('https://eduhawk-server-urpn.onrender.com/api/product');
 //         if (allRes.ok) {
 //           const allJson = await allRes.json();
 //           const allProducts = Array.isArray(allJson)
@@ -241,12 +240,11 @@
 
 // export default BlogDetail;
 
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { ArrowLeftIcon, ShareIcon } from "@heroicons/react/24/outline";
+import { useSelector } from "react-redux";
 
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeftIcon, ShareIcon } from '@heroicons/react/24/outline';
-import { useSelector } from 'react-redux';
-
-import { selectProducts } from './productsSlice'; // adjust path
+import { selectProducts } from "./productsSlice"; // adjust path
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -256,16 +254,13 @@ const BlogDetail = () => {
   const allProducts = useSelector(selectProducts);
 
   // Find current post
-  const post = allProducts.find(
-    (p) => (p._id || p.id) === id
-  );
+  const post = allProducts.find((p) => (p._id || p.id) === id);
 
   // Related posts: same category, exclude current
   const relatedPosts = allProducts
     .filter(
       (p) =>
-        (p._id || p.id) !== id &&
-        p?.category?.name === post?.category?.name
+        (p._id || p.id) !== id && p?.category?.name === post?.category?.name,
     )
     .slice(0, 3);
 
@@ -287,14 +282,14 @@ const BlogDetail = () => {
 
   const formatDate = (iso) =>
     iso
-      ? new Date(iso).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
+      ? new Date(iso).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
         })
-      : '';
+      : "";
 
-  const categoryName = post?.category?.name ?? 'Uncategorised';
+  const categoryName = post?.category?.name ?? "Uncategorised";
   const heroImage = post?.images?.[0] ?? null;
   const postDate = formatDate(post?.createdAt);
 
@@ -322,7 +317,9 @@ const BlogDetail = () => {
             />
           ) : (
             <div className="w-full h-64 sm:h-96 bg-indigo-100 flex items-center justify-center">
-              <span className="text-indigo-300 text-lg font-medium">No image</span>
+              <span className="text-indigo-300 text-lg font-medium">
+                No image
+              </span>
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -405,7 +402,7 @@ const BlogDetail = () => {
                       </div>
                     )}
                     <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-medium px-3 py-1 rounded-full">
-                      {related?.category?.name ?? 'Uncategorised'}
+                      {related?.category?.name ?? "Uncategorised"}
                     </span>
                   </div>
                   <div className="p-5">
