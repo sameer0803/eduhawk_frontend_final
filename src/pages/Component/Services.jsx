@@ -228,7 +228,7 @@ import Globalmap2 from "../../Images/Service Image/backround one.jpg";
 
 // Random high-quality study abroad themed images (Unsplash – free to use)
 const slideImages = [
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80", // University campus
+  "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80", // University campus
   "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80", // Student with books & globe
   "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80", // Library / global education vibe
 ];
