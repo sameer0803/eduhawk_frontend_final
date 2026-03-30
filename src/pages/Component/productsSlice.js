@@ -5,7 +5,7 @@
 //   'products/fetchProducts',
 //   async (_, { rejectWithValue }) => {
 //     try {
-//       const res = await fetch('https://eduhawk-server-urpn.onrender.com/api/product');
+//       const res = await fetch('http://65.2.131.111:8000/api/product');
 
 //       if (!res.ok) {
 //         throw new Error(`HTTP ${res.status} – ${res.statusText}`);
@@ -97,7 +97,7 @@ export const fetchProducts = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await fetch(
-        "https://eduhawk-server-urpn.onrender.com/api/product",
+        "http://65.2.131.111:8000/api/product",
       );
 
       if (!res.ok) {
