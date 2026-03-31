@@ -131,7 +131,7 @@ export default function Footer() {
               <div className="text-gray-400 mb-1.5">Contact Us</div>
               <div className="text-white">+91 9630736070</div>
               <div className="text-white mt-1">eduhawk.global@gmail.com</div>
-              <div className="text-gray-400 mt-3 text-xs">Bhopal, Madhya Pradesh, India</div>
+              <div className="text-gray-400 mt-3 text-xs">N-5, South Extension Part-1, New Delhi-110049</div>
             </div>
           </div>
         </div>

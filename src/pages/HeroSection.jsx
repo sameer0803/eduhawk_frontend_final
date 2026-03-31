@@ -1447,7 +1447,7 @@ export default function HeroSection() {
                       type="tel"
                       name="phone"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 7632949984"
                       value={modalForm.phone}
                       onChange={(e) =>
                         setModalForm({ ...modalForm, phone: e.target.value })
@@ -2106,7 +2106,7 @@ export default function HeroSection() {
                 {
                   icon: "📞",
                   title: "Phone",
-                  detail: "+91 98765 43210",
+                  detail: "+91 7632949984",
                   sub: "Mon–Sat, 9 AM – 7 PM",
                 },
                 {
