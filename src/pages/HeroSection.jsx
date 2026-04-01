@@ -1618,11 +1618,11 @@ export default function HeroSection() {
           <p className="text-[#d4a853] uppercase tracking-wider text-sm md:text-base font-medium mb-6">
             🏥 NMC-Approved Universities Abroad
           </p>
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 md:mb-8">
+          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 md:mb-8">
             Your MBBS Abroad Journey
             <br />
             <span className="text-[#d4a853]">Starts with Right Guidance</span>
-          </h1>
+          </h2>
           <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 md:mb-12 font-light leading-relaxed">
             Trusted MBBS abroad consultants for Indian students. Transparent
             counselling, no hidden charges, and end-to-end support from
