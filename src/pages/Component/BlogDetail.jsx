@@ -17,7 +17,7 @@
 //         setLoading(true);
 
 //         // ✅ Fetch single product by id
-//         const res = await fetch(`http://65.2.131.111:8000/api/product/${id}`);
+//         const res = await fetch(`https://api.eduhawk.in/api/product/${id}`);
 //         if (!res.ok) throw new Error(`HTTP ${res.status} – ${res.statusText}`);
 
 //         const json = await res.json();
@@ -30,7 +30,7 @@
 //         setPost(productData);
 
 //         // ✅ Fetch related posts (same category)
-//         const allRes = await fetch('http://65.2.131.111:8000/api/product');
+//         const allRes = await fetch('https://api.eduhawk.in/api/product');
 //         if (allRes.ok) {
 //           const allJson = await allRes.json();
 //           const allProducts = Array.isArray(allJson)

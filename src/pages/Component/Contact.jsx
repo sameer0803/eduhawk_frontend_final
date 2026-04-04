@@ -363,7 +363,7 @@
 // // //     setStatus({ loading: true, message: '', error: false });
 
 // // //     try {
-// // //       const response = await fetch('http://65.2.131.111:8000/api/contact/create', {
+// // //       const response = await fetch('https://api.eduhawk.in/api/contact/create', {
 // // //         method: 'POST',
 // // //         headers: {
 // // //           'Content-Type': 'application/json',
@@ -750,7 +750,7 @@
 // //     setStatus({ loading: true, message: '', error: false });
 
 // //     try {
-// //       const response = await fetch('http://65.2.131.111:8000/api/contact/create', {
+// //       const response = await fetch('https://api.eduhawk.in/api/contact/create', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -1171,7 +1171,7 @@
 // //     }
 
 // //     try {
-// //       const response = await fetch('http://65.2.131.111:8000/api/contact/create', {
+// //       const response = await fetch('https://api.eduhawk.in/api/contact/create', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -1607,7 +1607,7 @@
 // //     }
 
 // //     try {
-// //       const response = await fetch('http://65.2.131.111:8000/api/contact/create', {
+// //       const response = await fetch('https://api.eduhawk.in/api/contact/create', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -1990,7 +1990,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://65.2.131.111:8000/api/contact/create', {
+//       const response = await fetch('https://api.eduhawk.in/api/contact/create', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({
@@ -2218,7 +2218,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://65.2.131.111:8000/api/contact/create', {
+//       const response = await fetch('https://api.eduhawk.in/api/contact/create', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({
@@ -2551,7 +2551,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "http://65.2.131.111:8000/api/contact/create",
+        "https://api.eduhawk.in/api/contact/create",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

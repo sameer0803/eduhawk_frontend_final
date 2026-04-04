@@ -167,7 +167,7 @@
 //     e.preventDefault();
 
 //     try {
-//       const res = await fetch("http://65.2.131.111:8000/api/query/create", {
+//       const res = await fetch("https://api.eduhawk.in/api/query/create", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -1261,7 +1261,7 @@ export default function HeroSection() {
   // ── Shared API call ────────────────────────────────────────────────────────
   const submitToApi = async (payload) => {
     const res = await fetch(
-      "http://65.2.131.111:8000/api/query/create",
+      "https://api.eduhawk.in/api/query/create",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
