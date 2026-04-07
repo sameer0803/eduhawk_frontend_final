@@ -142,6 +142,7 @@ export default function HeroSection() {
                   {slide.title}
                 </h1>
 
+
                 <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-light mb-10 max-w-4xl mx-auto">
                   {slide.subtitle}
                 </p>
