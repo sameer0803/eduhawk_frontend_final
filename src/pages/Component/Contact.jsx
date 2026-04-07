@@ -1399,7 +1399,7 @@ const Contact = () => {
                 B-24, Dumraon Palace,<br />Frazer Road, Patna, Bihar - 800001
               </p>
               <p className="text-[#02145a] font-medium flex items-center gap-2">
-                <i className="fa-solid fa-phone"></i> +91 9031075512
+                <i className="fa-solid fa-phone"></i> +91 7632949984
               </p>
             </div>
 
