@@ -1,5 +1,3 @@
-
-
 // // // import React, { useState, useRef } from "react";
 // // // import { motion } from "framer-motion";
 // // // import ReCAPTCHA from "react-google-recaptcha";
@@ -76,7 +74,7 @@
 
 // // //     try {
 // // //       const response = await fetch(
-// // //         "https://eduhawk-server-urpn.onrender.com/api/contact/create",
+// // //         "https://api.eduhawk.in/api/contact/create",
 // // //         {
 // // //           method: "POST",
 // // //           headers: { "Content-Type": "application/json" },
@@ -387,9 +385,7 @@
 // // //   );
 // // // };
 
-
 // // // export default Contact;
-
 
 // // import React, { useState, useRef } from "react";
 // // import { motion } from "framer-motion";
@@ -470,7 +466,7 @@
 
 // //     try {
 // //       const response = await fetch(
-// //         "https://eduhawk-server-urpn.onrender.com/api/contact/create",
+// //         "https://api.eduhawk.in/api/contact/create",
 // //         {
 // //           method: "POST",
 // //           headers: { "Content-Type": "application/json" },
@@ -553,7 +549,7 @@
 // //       >
 // //         <div className="container mx-auto px-6 lg:px-8">
 // //           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            
+
 // //             {/* LEFT SIDE - FORM */}
 // //             <motion.div variants={slideLeft} className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
 // //               <h2 className="text-3xl md:text-4xl font-bold text-[#02145a] mb-6">
@@ -689,7 +685,7 @@
 // //           </h2>
 
 // //           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
 // //             {/* Delhi */}
 // //             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all">
 // //               <h4 className="font-bold text-xl text-[#02145a] mb-3">New Delhi</h4>
@@ -810,7 +806,7 @@
 
 //     try {
 //       const response = await fetch(
-//         "https://eduhawk-server-urpn.onrender.com/api/contact/create",
+//         "https://api.eduhawk.in/api/contact/create",
 //         {
 //           method: "POST",
 //           headers: { "Content-Type": "application/json" },
@@ -893,7 +889,7 @@
 //       >
 //         <div className="container mx-auto px-6 lg:px-8">
 //           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            
+
 //             {/* LEFT SIDE - FORM */}
 //             <motion.div variants={slideLeft} className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
 //               <h2 className="text-3xl md:text-4xl font-bold text-[#02145a] mb-6">
@@ -1029,7 +1025,7 @@
 //           </h2>
 
 //           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
 //             {/* Delhi Branch */}
 //             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all">
 //               <h4 className="font-bold text-xl text-[#02145a] mb-3">New Delhi</h4>
@@ -1161,7 +1157,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://eduhawk-server-urpn.onrender.com/api/contact/create",
+        "https://api.eduhawk.in/api/contact/create",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -1173,7 +1169,7 @@ const Contact = () => {
             message: formData.message,
             captcha: captchaToken,
           }),
-        }
+        },
       );
 
       const data = await response.json();
@@ -1219,9 +1215,10 @@ const Contact = () => {
         transition={{ duration: 1.2 }}
         className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage: "url('https://t3.ftcdn.net/jpg/05/47/40/44/240_F_547404496_ZV5aB55KPrKJ90qzD2zhoPhNbjn07wX3.jpg')",   // ← Yahan naya image daala hai
+          backgroundImage:
+            "url('https://t3.ftcdn.net/jpg/05/47/40/44/240_F_547404496_ZV5aB55KPrKJ90qzD2zhoPhNbjn07wX3.jpg')", // ← Yahan naya image daala hai
           backgroundBlendMode: "multiply",
-          backgroundColor: "rgba(0, 0, 0, 0.60)",   // Dark overlay for better text visibility
+          backgroundColor: "rgba(0, 0, 0, 0.60)", // Dark overlay for better text visibility
         }}
       >
         <motion.h1
@@ -1244,44 +1241,84 @@ const Contact = () => {
       >
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            
             {/* LEFT SIDE - FORM */}
-            <motion.div variants={slideLeft} className="bg-white rounded-2xl shadow-xl p-8 lg:p-10">
+            <motion.div
+              variants={slideLeft}
+              className="bg-white rounded-2xl shadow-xl p-8 lg:p-10"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-[#02145a] mb-6">
                 Get In Touch
               </h2>
               <p className="text-gray-600 mb-8">
-                We're here to assist you with any inquiries. Feel free to reach out!
+                We're here to assist you with any inquiries. Feel free to reach
+                out!
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  variants={containerVariants}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                >
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition"
-                      placeholder="Your first name" />
+                      placeholder="Your first name"
+                    />
                   </motion.div>
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition"
-                      placeholder="Your last name" />
+                      placeholder="Your last name"
+                    />
                   </motion.div>
                 </motion.div>
 
-                <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  variants={containerVariants}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                >
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition"
-                      placeholder="example@email.com" />
+                      placeholder="example@email.com"
+                    />
                   </motion.div>
                   <motion.div variants={itemVariants}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange}
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition"
-                      placeholder="+91 .........." />
+                      placeholder="+91 .........."
+                    />
                   </motion.div>
                 </motion.div>
 
@@ -1289,26 +1326,44 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Event Type <span className="text-red-500">*</span>
                   </label>
-                  <select name="subject" value={formData.subject} onChange={handleChange} required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition bg-white">
+                  <select
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition bg-white"
+                  >
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="CorporateEvent">Corporate Event</option>
                     <option value="Wedding">Wedding</option>
                     <option value="Exhibition">Exhibition</option>
                     <option value="Conference">Conference</option>
-                    <option value="Political/Govt">Political / Government</option>
+                    <option value="Political/Govt">
+                      Political / Government
+                    </option>
                     <option value="Other">Other</option>
                   </select>
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea name="message" rows={5} value={formData.message} onChange={handleChange} required
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#02145a] focus:border-[#02145a] outline-none transition resize-none"
-                    placeholder="How can we help you?" />
+                    placeholder="How can we help you?"
+                  />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="flex justify-center md:justify-start pt-4">
+                <motion.div
+                  variants={itemVariants}
+                  className="flex justify-center md:justify-start pt-4"
+                >
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey="6Lf6cY4sAAAAAE1CYlnILZ9OJYWn6wK8ieq_2awj"
@@ -1318,8 +1373,11 @@ const Contact = () => {
                 </motion.div>
 
                 {status.message && (
-                  <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                    className={`text-center font-medium ${status.error ? "text-red-600" : "text-green-600"}`}>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`text-center font-medium ${status.error ? "text-red-600" : "text-green-600"}`}
+                  >
                     {status.message}
                   </motion.p>
                 )}
@@ -1335,36 +1393,68 @@ const Contact = () => {
                   >
                     {status.loading ? (
                       <div className="flex items-center gap-3">
-                        <motion.div animate={{ rotate: 360 }} transition={{ duration: 1.8, repeat: Infinity, ease: "linear" }} className="text-2xl">
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{
+                            duration: 1.8,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
+                          className="text-2xl"
+                        >
                           🤖
                         </motion.div>
                         <span>Sending...</span>
                       </div>
-                    ) : "Send Message"}
+                    ) : (
+                      "Send Message"
+                    )}
                   </motion.button>
                 </motion.div>
               </form>
             </motion.div>
 
             {/* RIGHT SIDE - Main Office + Quick Contact */}
-            <motion.div variants={slideRight} className="bg-white rounded-2xl shadow-xl p-8 lg:p-10 space-y-8">
+            <motion.div
+              variants={slideRight}
+              className="bg-white rounded-2xl shadow-xl p-8 lg:p-10 space-y-8"
+            >
               <div>
-                <h3 className="text-2xl font-bold text-[#02145a] mb-4">Our Main Office</h3>
-                <p className="text-gray-700 mb-6">I/J-1 Chandi Vyapar Bhawan, Exhibition Road, Patna - 800001</p>
+                <h3 className="text-2xl font-bold text-[#02145a] mb-4">
+                  Our Main Office
+                </h3>
+                <p className="text-gray-700 mb-6">
+                  I/J-1 Chandi Vyapar Bhawan, Exhibition Road, Patna - 800001
+                </p>
                 <div className="aspect-video rounded-lg overflow-hidden shadow-inner">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.036366105497!2d77.22180577549842!3d28.568670675699693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25b6c992ab9%3A0x87fbc9cb56be469a!2sBajrang%20House%2C%20N-5%2C%20next%20to%20Aakash%20Institute%2C%20South%20Extension%20I%2C%20Block%20N%2C%20New%20Delhi%2C%20Delhi%20110003!5e0!3m2!1sen!2sin!4v1773053734632!5m2!1sen!2sin"
-                    width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
                   />
                 </div>
               </div>
 
               <div>
-                <h5 className="text-xl font-semibold text-[#02145a] mb-4">Quick Contact</h5>
+                <h5 className="text-xl font-semibold text-[#02145a] mb-4">
+                  Quick Contact
+                </h5>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><i className="fa-solid fa-phone mr-3 text-[#02145a]"></i> +91-76329 49984</li>
-                  <li className="flex items-center"><i className="fa-solid fa-envelope mr-3 text-[#02145a]"></i> eduhawk.global@gmail.com</li>
-                  <li className="flex items-center"><i className="fa-solid fa-location-dot mr-3 text-[#02145a]"></i> Exhibition Road, Patna</li>
+                  <li className="flex items-center">
+                    <i className="fa-solid fa-phone mr-3 text-[#02145a]"></i>{" "}
+                    +91-76329 49984
+                  </li>
+                  <li className="flex items-center">
+                    <i className="fa-solid fa-envelope mr-3 text-[#02145a]"></i>{" "}
+                    eduhawk.global@gmail.com
+                  </li>
+                  <li className="flex items-center">
+                    <i className="fa-solid fa-location-dot mr-3 text-[#02145a]"></i>{" "}
+                    Exhibition Road, Patna
+                  </li>
                 </ul>
               </div>
             </motion.div>
@@ -1380,12 +1470,15 @@ const Contact = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             {/* Delhi Branch */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all">
-              <h4 className="font-bold text-xl text-[#02145a] mb-3">New Delhi</h4>
+              <h4 className="font-bold text-xl text-[#02145a] mb-3">
+                New Delhi
+              </h4>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                N-5, South Extension Part-1,<br />New Delhi - 110049
+                N-5, South Extension Part-1,
+                <br />
+                New Delhi - 110049
               </p>
               <p className="text-[#02145a] font-medium flex items-center gap-2">
                 <i className="fa-solid fa-phone"></i> +91 7319908359
@@ -1396,7 +1489,9 @@ const Contact = () => {
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all">
               <h4 className="font-bold text-xl text-[#02145a] mb-3">Patna</h4>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                B-24, Dumraon Palace,<br />Frazer Road, Patna, Bihar - 800001
+                B-24, Dumraon Palace,
+                <br />
+                Frazer Road, Patna, Bihar - 800001
               </p>
               <p className="text-[#02145a] font-medium flex items-center gap-2">
                 <i className="fa-solid fa-phone"></i> +91 7632949984
@@ -1407,7 +1502,11 @@ const Contact = () => {
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all">
               <h4 className="font-bold text-xl text-[#02145a] mb-3">Bhopal</h4>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                103, Goyal Vihar, Plot No.31-C,<br />Zone -II, M.P Nagar,<br />Bhopal, Madhya Pradesh 462011
+                103, Goyal Vihar, Plot No.31-C,
+                <br />
+                Zone -II, M.P Nagar,
+                <br />
+                Bhopal, Madhya Pradesh 462011
               </p>
               <p className="text-[#02145a] font-medium flex items-center gap-2">
                 <i className="fa-solid fa-phone"></i> +91 7632949984
@@ -1418,13 +1517,16 @@ const Contact = () => {
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all">
               <h4 className="font-bold text-xl text-[#02145a] mb-3">Lucknow</h4>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                Shop No-5, Barkhurdarpur Godamba,<br />Kursi Road, Lucknow,<br />Uttar Pradesh 226026
+                Shop No-5, Barkhurdarpur Godamba,
+                <br />
+                Kursi Road, Lucknow,
+                <br />
+                Uttar Pradesh 226026
               </p>
               <p className="text-[#02145a] font-medium flex items-center gap-2">
                 <i className="fa-solid fa-phone"></i> +91 8400056046
               </p>
             </div>
-
           </div>
         </div>
       </section>

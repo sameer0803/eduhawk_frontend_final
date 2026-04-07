@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 
 import icon1 from "../Images/icons/ux-design_2998253.svg";
@@ -20,6 +18,7 @@ import topRanking8 from "../Images/University of the Philippines Manila, College
 
 import globalImage from "../Images/home_page_Image/class room.jpg";
 import globalImage2 from "../Images/home_page_Image/class room 2.jpg";
+import { Link } from "react-router-dom";
 
 const NAV_LINKS = ["Home", "About", "Services", "Countries", "Contact"];
 
@@ -172,14 +171,11 @@ export default function HeroSection() {
 
   // ── Shared API call ────────────────────────────────────────────────────────
   const submitToApi = async (payload) => {
-    const res = await fetch(
-      "https://eduhawk-server-urpn.onrender.com/api/query/create",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      },
-    );
+    const res = await fetch("https://api.eduhawk.in/api/query/create", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
     return res.json();
   };
 
@@ -523,34 +519,43 @@ export default function HeroSection() {
       </section>
 
       {/* ── BANNER SECTION ───────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#0a2342] via-[#1a4a7a] to-[#0d3460] py-20 md:py-28 px-5 sm:px-8 lg:px-12 text-center relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#d4a853]/10 pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-64 sm:w-80 h-64 sm:h-40 rounded-full bg-[#d4a853]/5 pointer-events-none" />
-        <div className="max-w-5xl mx-auto relative">
-          <p className="text-[#d4a853] uppercase tracking-wider text-sm md:text-base font-medium mb-6">
-            🏥 NMC-Approved Universities Abroad
-          </p>
-          <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 md:mb-8">
-            Your MBBS Abroad Journey
-            <br />
-            <span className="text-[#d4a853]">Starts with Right Guidance</span>
-          </h2>
-          <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 md:mb-12 font-light leading-relaxed">
-            Trusted MBBS abroad consultants for Indian students. Transparent
-            counselling, no hidden charges, and end-to-end support from
-            application to post-arrival.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-5 md:gap-8">
-            <button className="bg-gradient-to-r from-[#d4a853] to-[#f0c070] text-[#0a2342] font-bold uppercase tracking-wider px-10 py-4 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base">
-              Book Free Counselling →
-            </button>
-            <button className="border-2 border-[#d4a853]/60 text-white px-10 py-4 rounded-lg font-medium hover:bg-[#d4a853]/10 transition-all duration-300 text-sm sm:text-base">
-              Explore Countries
-            </button>
-          </div>
-        </div>
-      </section>
+    
 
+<section className="bg-gradient-to-br from-[#0a2342] via-[#1a4a7a] to-[#0d3460] py-20 md:py-28 px-5 sm:px-8 lg:px-12 text-center relative overflow-hidden">
+  <div className="absolute -top-20 -right-20 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#d4a853]/10 pointer-events-none" />
+  <div className="absolute -bottom-20 -left-20 w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-[#d4a853]/5 pointer-events-none" />
+
+  <div className="max-w-5xl mx-auto relative">
+    <p className="text-[#d4a853] uppercase tracking-wider text-sm md:text-base font-medium mb-6">
+      🏥 NMC-Approved Universities Abroad
+    </p>
+
+    <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 md:mb-8">
+      Your MBBS Abroad Journey
+      <br />
+      <span className="text-[#d4a853]">Starts with Right Guidance</span>
+    </h2>
+
+    <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 md:mb-12 font-light leading-relaxed">
+      Trusted MBBS abroad consultants for Indian students. Transparent counselling, 
+      no hidden charges, and end-to-end support from application to post-arrival.
+    </p>
+
+     <div className="flex flex-col sm:flex-row justify-center items-center gap-5 md:gap-8">
+            <Link to="/contact">
+              <button className="bg-gradient-to-r from-[#d4a853] to-[#f0c070] text-[#0a2342] font-bold uppercase tracking-wider px-10 py-4 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto">
+                Book Free Counselling →
+              </button>
+            </Link>
+
+            <Link to="/allcollege">
+              <button className="border-2 border-[#d4a853]/60 text-white px-10 py-4 rounded-lg font-medium hover:bg-[#d4a853]/10 hover:border-[#d4a853] transition-all duration-300 text-sm sm:text-base w-full sm:w-auto">
+                Explore Countries
+              </button>
+            </Link>
+          </div>
+  </div>
+</section>
       {/* ── ABOUT ────────────────────────────────────────────────────────── */}
       <section className="py-8 md:py-10 px-5 sm:px-6 lg:px-10 bg-[#faf8f4]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
