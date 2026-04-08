@@ -75,6 +75,7 @@ const HERO_SLIDES = [
     subtitle: "₹15–32 Lakh total • No entrance exam • Direct admission",
     cta: "Compare Packages",
   },
+  
   {
     image:
       "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&q=80&w=1920",
