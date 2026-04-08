@@ -63,7 +63,7 @@ const HERO_SLIDES = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=1920",
+      "https://psgimsr.ac.in/wp-content/uploads/2024/07/20240717_220126.jpg",
     title: "MBBS in Georgia – Modern & Affordable",
     subtitle: "English medium • European standards • Low cost of living",
     cta: "Explore Georgia Options",
