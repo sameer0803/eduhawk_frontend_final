@@ -145,7 +145,7 @@
 // //               About MBBS in Russia
 // //             </h3>
 // //             <p className="text-lg leading-relaxed text-gray-700">
-// //               Studying MBBS in Russia is notably straightforward 
+// //               Studying MBBS in Russia is notably straightforward
 // //             </p>
 
 // //             {showMoreClimate ? (
@@ -597,7 +597,6 @@
 // // };
 
 // // export default Egypt;
-
 
 // // import React, { useState } from "react";
 
@@ -1131,8 +1130,6 @@
 // // };
 
 // // export default Egypt;
-
-
 
 // import React, { useState } from "react";
 
@@ -2222,7 +2219,7 @@
 
 //       {/* ==================== MAIN CONTENT ==================== */}
 //       <div className="container mx-auto px-4 py-12 max-w-7xl">
-       
+
 //         <div className="py-16 bg-gray-50">
 //           <div className="container mx-auto px-4 max-w-4xl">
 //             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
@@ -2282,7 +2279,7 @@
 //             </div>
 //           </div>
 //         </div>
-      
+
 //       </div>
 
 //       {/* Floating Enroll Button */}
@@ -2658,7 +2655,6 @@
 
 // export default Egypt;
 
-
 import React, { useState } from "react";
 import EgyptFlag from "../../Images/country flag png/Egypt.svg"; // Correct path to Egypt flag
 import { FiPlus, FiMinus } from "react-icons/fi";
@@ -2708,7 +2704,8 @@ const Egypt = () => {
         "No, IELTS or TOEFL is not required for most universities. The medium of instruction is English, especially for international programs.",
     },
     {
-      question: "Is hostel accommodation and Indian food available for students?",
+      question:
+        "Is hostel accommodation and Indian food available for students?",
       answer:
         "Yes, most universities provide hostel facilities (shared rooms, furnished, with kitchens/laundry). Many hostels/messes offer Indian food options, self-cooking is common, and Indian restaurants/mess facilities exist near campuses in cities like Cairo and Alexandria.",
     },
@@ -2730,9 +2727,9 @@ const Egypt = () => {
             className="w-full h-full object-cover brightness-75"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-2xl">
+            <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-2xl">
               STUDY MBBS IN EGYPT
-            </h1>
+            </h2>
           </div>
         </div>
       </div>
@@ -2749,9 +2746,9 @@ const Egypt = () => {
             />
           </div>
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900">
               Explore MBBS Opportunities in Egypt 2025–2026
-            </h2>
+            </h1>
           </div>
         </div>
 
@@ -2762,14 +2759,28 @@ const Egypt = () => {
               About Egypt
             </h2>
             <p className="text-lg leading-relaxed text-gray-700">
-              Egypt's rich history and prehistoric treasures make it a unique location for medical study. Famous landmarks like the Pyramids, Sphinx, and Karnak Temple line the Nile. In Cairo, visit the Mohammad Ali Mosque and Egyptian Museum. Egyptian medical universities attract MBBS students globally, offering a safe environment for both male and female students. Admission is straightforward with no additional entrance exams beyond NEET for Indians. The curriculum is MCQ-based with English-medium instruction and strong practical training in hospitals.
+              Egypt's rich history and prehistoric treasures make it a unique
+              location for medical study. Famous landmarks like the Pyramids,
+              Sphinx, and Karnak Temple line the Nile. In Cairo, visit the
+              Mohammad Ali Mosque and Egyptian Museum. Egyptian medical
+              universities attract MBBS students globally, offering a safe
+              environment for both male and female students. Admission is
+              straightforward with no additional entrance exams beyond NEET for
+              Indians. The curriculum is MCQ-based with English-medium
+              instruction and strong practical training in hospitals.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-gray-700">
-              MBBS in Egypt prepares students for respected global medical careers. Affordable alternatives include China, Nepal, Germany, Philippines, Ukraine, Bangladesh, and Kyrgyzstan, but Egypt remains popular for its 6-year duration (exempting preparatory courses for internationals) and cosmopolitan society.
+              MBBS in Egypt prepares students for respected global medical
+              careers. Affordable alternatives include China, Nepal, Germany,
+              Philippines, Ukraine, Bangladesh, and Kyrgyzstan, but Egypt
+              remains popular for its 6-year duration (exempting preparatory
+              courses for internationals) and cosmopolitan society.
             </p>
             {showMoreAbout ? (
               <p className="mt-4 text-lg leading-relaxed text-gray-700">
-                International students from Malaysia, Nepal, Nigeria, and more choose Egypt for its skilled faculty, visiting professors, and equal opportunities.
+                International students from Malaysia, Nepal, Nigeria, and more
+                choose Egypt for its skilled faculty, visiting professors, and
+                equal opportunities.
               </p>
             ) : null}
             <button
@@ -2831,11 +2842,18 @@ const Egypt = () => {
               About MBBS in Egypt
             </h3>
             <p className="text-lg leading-relaxed text-gray-700">
-              Studying MBBS in Egypt is straightforward with a safe learning environment. No donation/capitation fees. Many universities follow a modern/US-influenced curriculum with advanced facilities. Skilled faculty ensure excellent teacher-student ratios. Graduates are well-prepared for exams like FMGE/NEXT, USMLE, PLAB.
+              Studying MBBS in Egypt is straightforward with a safe learning
+              environment. No donation/capitation fees. Many universities follow
+              a modern/US-influenced curriculum with advanced facilities.
+              Skilled faculty ensure excellent teacher-student ratios. Graduates
+              are well-prepared for exams like FMGE/NEXT, USMLE, PLAB.
             </p>
             {showMoreClimate ? (
               <p className="mt-4 text-lg leading-relaxed text-gray-700">
-                Egypt's climate is warm (desert/temperate), with mild winters and hot summers—comfortable with indoor heating/AC. Students enjoy multicultural vibes, extracurriculars, and volunteer opportunities.
+                Egypt's climate is warm (desert/temperate), with mild winters
+                and hot summers—comfortable with indoor heating/AC. Students
+                enjoy multicultural vibes, extracurriculars, and volunteer
+                opportunities.
               </p>
             ) : null}
             <button
@@ -2854,20 +2872,44 @@ const Egypt = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Cairo University", img: "https://upload.wikimedia.org/wikipedia/commons/5/57/CairoUniv.jpg" },
-              { name: "Ain Shams University", img: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Eng_asu_main_bldng.JPG" },
-              { name: "Alexandria University", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alexandria_University.JPG/1280px-Alexandria_University.JPG" },
-              { name: "Mansoura University", img: "https://s3.ap-south-1.amazonaws.com/gotouniv/cover_photo/2002/cover_photo_1500X500.jpg" },
-              { name: "Assiut University", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Assiut_University.jpg/800px-Assiut_University.jpg" },
-              { name: "Helwan University", img: "https://upload.wikimedia.org/wikipedia/commons/b/b4/%D0%9F%D0%B3%D0%BD%D0%B8%D1%83._%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81_%E2%84%965.jpg" },
+              {
+                name: "Cairo University",
+                img: "https://upload.wikimedia.org/wikipedia/commons/5/57/CairoUniv.jpg",
+              },
+              {
+                name: "Ain Shams University",
+                img: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Eng_asu_main_bldng.JPG",
+              },
+              {
+                name: "Alexandria University",
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alexandria_University.JPG/1280px-Alexandria_University.JPG",
+              },
+              {
+                name: "Mansoura University",
+                img: "https://s3.ap-south-1.amazonaws.com/gotouniv/cover_photo/2002/cover_photo_1500X500.jpg",
+              },
+              {
+                name: "Assiut University",
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Assiut_University.jpg/800px-Assiut_University.jpg",
+              },
+              {
+                name: "Helwan University",
+                img: "https://upload.wikimedia.org/wikipedia/commons/b/b4/%D0%9F%D0%B3%D0%BD%D0%B8%D1%83._%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81_%E2%84%965.jpg",
+              },
             ].map((uni, i) => (
               <div
                 key={i}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
-                <img src={uni.img} alt={uni.name} className="w-full h-64 object-cover" />
+                <img
+                  src={uni.img}
+                  alt={uni.name}
+                  className="w-full h-64 object-cover"
+                />
                 <div className="p-6 text-center">
-                  <h4 className="text-xl font-bold text-blue-900">{uni.name}</h4>
+                  <h4 className="text-xl font-bold text-blue-900">
+                    {uni.name}
+                  </h4>
                 </div>
               </div>
             ))}
@@ -2882,20 +2924,38 @@ const Egypt = () => {
             </h2>
             <div className="space-y-6">
               <div>
-                <h5 className="text-xl font-semibold">1. Affordable High-Quality Education</h5>
-                <p className="text-gray-700">Globally recognized at low cost compared to West/private India.</p>
+                <h5 className="text-xl font-semibold">
+                  1. Affordable High-Quality Education
+                </h5>
+                <p className="text-gray-700">
+                  Globally recognized at low cost compared to West/private
+                  India.
+                </p>
               </div>
               <div>
-                <h5 className="text-xl font-semibold">2. No Donation / Simple Admission</h5>
-                <p className="text-gray-700">Straightforward process; NEET compulsory for Indians.</p>
+                <h5 className="text-xl font-semibold">
+                  2. No Donation / Simple Admission
+                </h5>
+                <p className="text-gray-700">
+                  Straightforward process; NEET compulsory for Indians.
+                </p>
               </div>
               <div>
-                <h5 className="text-xl font-semibold">3. English Medium + Modern Curriculum</h5>
-                <p className="text-gray-700">US-influenced with advanced labs/research.</p>
+                <h5 className="text-xl font-semibold">
+                  3. English Medium + Modern Curriculum
+                </h5>
+                <p className="text-gray-700">
+                  US-influenced with advanced labs/research.
+                </p>
               </div>
               <div>
-                <h5 className="text-xl font-semibold">4. Strong Clinical Exposure + Global Prep</h5>
-                <p className="text-gray-700">Prepares for FMGE/USMLE/PLAB; part-time work possible in some cases.</p>
+                <h5 className="text-xl font-semibold">
+                  4. Strong Clinical Exposure + Global Prep
+                </h5>
+                <p className="text-gray-700">
+                  Prepares for FMGE/USMLE/PLAB; part-time work possible in some
+                  cases.
+                </p>
               </div>
             </div>
           </div>
@@ -2905,7 +2965,11 @@ const Egypt = () => {
               Cost of Study MBBS in Egypt
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              MBBS in Egypt is highly affordable for Indian students. Government subsidies keep fees low—no donations. Total cost (tuition + living) often ₹25–45 lakhs for the full course. Annual tuition ~$5,000–$8,000 (~₹4–7 lakhs). Living expenses are reasonable, with hostels and Indian food options available.
+              MBBS in Egypt is highly affordable for Indian students. Government
+              subsidies keep fees low—no donations. Total cost (tuition +
+              living) often ₹25–45 lakhs for the full course. Annual tuition
+              ~$5,000–$8,000 (~₹4–7 lakhs). Living expenses are reasonable, with
+              hostels and Indian food options available.
             </p>
           </div>
         </div>
@@ -2918,49 +2982,102 @@ const Egypt = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
               <p>
-                Students who choose to study MBBS in Egypt look for comfortable and affordable living facilities. Egyptian medical universities provide hostel facilities and essential amenities for international students.
+                Students who choose to study MBBS in Egypt look for comfortable
+                and affordable living facilities. Egyptian medical universities
+                provide hostel facilities and essential amenities for
+                international students.
               </p>
-              <h4 className="text-2xl font-bold mt-8 mb-4">Hostel Facilities</h4>
+              <h4 className="text-2xl font-bold mt-8 mb-4">
+                Hostel Facilities
+              </h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Most medical universities in Egypt provide hostel facilities for international students.</li>
+                <li>
+                  Most medical universities in Egypt provide hostel facilities
+                  for international students.
+                </li>
                 <li>Hostel rooms are usually shared by 2–3 students.</li>
-                <li>Hostels are designed to provide a safe and comfortable living environment.</li>
-                <li>Students can stay in university hostels during their entire MBBS course duration.</li>
+                <li>
+                  Hostels are designed to provide a safe and comfortable living
+                  environment.
+                </li>
+                <li>
+                  Students can stay in university hostels during their entire
+                  MBBS course duration.
+                </li>
               </ul>
               <h4 className="text-2xl font-bold mt-8 mb-4">Room Facilities</h4>
-              <p>University hostel rooms generally include the following amenities:</p>
+              <p>
+                University hostel rooms generally include the following
+                amenities:
+              </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Fully furnished rooms</li>
                 <li>Comfortable beds, mattress and blankets, bedsheets</li>
                 <li>Study tables and chairs</li>
                 <li>Wardrobes or cupboards</li>
               </ul>
-              <h4 className="text-2xl font-bold mt-8 mb-4">Kitchen and Food Facilities</h4>
+              <h4 className="text-2xl font-bold mt-8 mb-4">
+                Kitchen and Food Facilities
+              </h4>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Most hostels provide common kitchens for students.</li>
                 <li>Students can cook their own meals in the kitchen.</li>
-                <li>Indian students can prepare Indian food, which helps them maintain their regular diet.</li>
-                <li>Many universities provide mess or canteen facilities offering Indian meals.</li>
-                <li>Indian restaurants are available near many university campuses.</li>
-                <li>Students can also enjoy local Egyptian cuisine and international food options.</li>
+                <li>
+                  Indian students can prepare Indian food, which helps them
+                  maintain their regular diet.
+                </li>
+                <li>
+                  Many universities provide mess or canteen facilities offering
+                  Indian meals.
+                </li>
+                <li>
+                  Indian restaurants are available near many university
+                  campuses.
+                </li>
+                <li>
+                  Students can also enjoy local Egyptian cuisine and
+                  international food options.
+                </li>
               </ul>
-              <h4 className="text-2xl font-bold mt-8 mb-4">Laundry and Daily Facilities</h4>
+              <h4 className="text-2xl font-bold mt-8 mb-4">
+                Laundry and Daily Facilities
+              </h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Hostels often provide laundry rooms or washing machine facilities.</li>
-                <li>Students can easily manage daily activities such as cooking and washing clothes.</li>
-                <li>These facilities make living in Egypt comfortable and convenient for international students.</li>
+                <li>
+                  Hostels often provide laundry rooms or washing machine
+                  facilities.
+                </li>
+                <li>
+                  Students can easily manage daily activities such as cooking
+                  and washing clothes.
+                </li>
+                <li>
+                  These facilities make living in Egypt comfortable and
+                  convenient for international students.
+                </li>
               </ul>
               <p className="mt-8">
-                <strong>Approximate monthly living expenses (2025–2026):</strong>
+                <strong>
+                  Approximate monthly living expenses (2025–2026):
+                </strong>
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
-                <li>Hostel / Accommodation: ₹4,000 – ₹15,000 (often $50–150/month; annual ~$600–$2,000)</li>
-                <li>Food (self-cooking + mess/Indian options): ₹8,000 – ₹15,000</li>
+                <li>
+                  Hostel / Accommodation: ₹4,000 – ₹15,000 (often $50–150/month;
+                  annual ~$600–$2,000)
+                </li>
+                <li>
+                  Food (self-cooking + mess/Indian options): ₹8,000 – ₹15,000
+                </li>
                 <li>Transport + Miscellaneous: ₹3,000 – ₹10,000</li>
-                <li><strong>Total monthly:</strong> ≈ ₹15,000 – ₹40,000</li>
+                <li>
+                  <strong>Total monthly:</strong> ≈ ₹15,000 – ₹40,000
+                </li>
               </ul>
               <p className="mt-6 italic text-gray-600">
-                Many campuses offer Indian mess facilities and nearby stores for familiar diet at low cost. Costs vary by city (Cairo higher) and lifestyle.
+                Many campuses offer Indian mess facilities and nearby stores for
+                familiar diet at low cost. Costs vary by city (Cairo higher) and
+                lifestyle.
               </p>
             </div>
           </div>
@@ -3012,7 +3129,8 @@ const Egypt = () => {
 
             <div className="text-center mt-12">
               <p className="text-gray-600 text-lg">
-                Have more questions? Feel free to contact our experts for free counseling!
+                Have more questions? Feel free to contact our experts for free
+                counseling!
               </p>
             </div>
           </div>
