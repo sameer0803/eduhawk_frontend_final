@@ -96,7 +96,9 @@ export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch("https://api.eduhawk.in/api/product");
+      const res = await fetch(
+        "https://api.eduhawk.in/api/product",
+      );
 
       if (!res.ok) {
         throw new Error(`HTTP ${res.status} – ${res.statusText}`);
